@@ -18,7 +18,9 @@ colorscheme Benokai
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
+"if $TMUX == ''
 set clipboard=unnamed
+"endif
 " Enhance command-line completion
 set wildmenu
 " Allow cursor keys in insert mode
@@ -170,3 +172,109 @@ set timeoutlen=1000 ttimeoutlen=0
 
 " Expand code with emmet with tab key
 let g:user_emmet_expandabbr_key = '<Tab>'
+
+" CtrlP
+" let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" ag.vim
+let g:ag_working_path_mode="r"
+
+" prettier
+" when running at every change you may want to disable quickfix
+let g:prettier#quickfix_enabled = 0
+let g:prettier#autoformat = 0
+autocmd BufWritePre,TextChanged,InsertLeave *.jsx,*.js,*.json PrettierAsync
+
+" max line lengh that prettier will wrap on
+let g:prettier#config#print_width = 120
+
+" number of spaces per indentation level
+let g:prettier#config#tab_width = 2
+
+" use tabs over spaces
+let g:prettier#config#use_tabs = 'false'
+
+" print semicolons
+let g:prettier#config#semi = 'true'
+
+" single quotes over double quotes
+let g:prettier#config#single_quote = 'false'
+
+" print spaces between brackets
+let g:prettier#config#bracket_spacing = 'true'
+
+" put > on the last line instead of new line
+let g:prettier#config#jsx_bracket_same_line = 'true'
+
+" none|es5|all
+let g:prettier#config#trailing_comma = 'all'
+
+" flow|babylon|typescript|postcss|json|graphql
+let g:prettier#config#parser = 'babylon'
+
+" JSX
+let g:jsx_ext_required = 0
+
+" fzf
+
+" If installed using Homebrew
+set rtp+=/usr/local/opt/fzf
+
+" Replace the default dictionary completion with fzf-based fuzzy completion
+inoremap <expr> <c-x><c-k> fzf#complete('cat /usr/share/dict/words')
+
+" Default fzf layout
+" - down / up / left / right
+let g:fzf_layout = { 'down': '~40%' }
+
+" Enable per-command history.
+" CTRL-N and CTRL-P will be automatically bound to next-history and
+" previous-history instead of down and up. If you don't like the change,
+" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+function! s:is_git_repo() abort
+  if executable('git')
+    call system('git rev-parse --is-inside-work-tree &>/dev/null')
+    if v:shell_error == 0
+      return 1
+    endif
+  endif
+  return 0
+endfunction
+
+function! s:fzf_files() abort
+  if s:is_git_repo()
+    GFiles
+  else
+    Files
+  endif
+endfunction
+
+nnoremap [fzf] <Nop>
+nmap <Leader>f [fzf]
+nnoremap <silent> [fzf]f :<C-u>call <SID>fzf_files()<CR>
+nnoremap <silent> [fzf]i :<C-u>Files<CR>
+nnoremap <silent> [fzf]h :<C-u>History<CR>
+nnoremap <silent> [fzf]b :<C-u>Buffers<CR>
+nnoremap <silent> [fzf]l :<C-u>BLines<CR>
+nnoremap <silent> [fzf]t :<C-u>Tags<CR>
+
+command! -bang -nargs=* Ag
+  \ call fzf#vim#grep(
+  \   'ag --hidden --ignore-case --nogroup --color --column '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg -uu --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
+" buffers
+" map <tab> and <shift-tab> to cycle between open buffers
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
