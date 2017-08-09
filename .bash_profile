@@ -1,5 +1,8 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
+export PATH="$HOME/bin:$PATH:/Users/anton/.nodenv/versions/7.2.1/bin";
+
+# Golang
+export GOPATH="$HOME/xdev/go";
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -107,8 +110,8 @@ complete -W "NSGlobalDomain" defaults;
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
 # PhantomJS
-#export PATH=~/root/phantomjs-2.1.1-macosx/bin:$PATH
-export PATH=~/root/phantomjs-1.8.2-macosx/bin:$PATH
+export PATH=~/root/phantomjs-2.1.1-macosx/bin:$PATH
+#export PATH=~/root/phantomjs-1.8.2-macosx/bin:$PATH
 
 # Git autocomplete
 if [ -f ~/.git-completion.bash ]; then
@@ -124,3 +127,16 @@ export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
 # if this is interactive shell, then bind hh to Ctrl-r (for Vi mode check doc)
 if [[ $- =~ .*i.* ]]; then bind -m vi-insert '"\C-r": "\C-[ddihh \C-j"' && bind -m vi-command '"\C-r": "ddihh \C-j"'; fi
+
+# Temporary fix for atom
+alias atom="atom --enable-gpu-rasterization"
+
+# Aliases
+alias rn="react-native"
+alias got="git"
+alias gut="git"
+alias gitp="git"
+alias ush="push"
+alias gcm="git commit -m"
+alias nuke="kill -9"
+alias rspec="bundle exec rspec"
