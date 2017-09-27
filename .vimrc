@@ -63,6 +63,8 @@ set cursorline
 set shiftwidth=2
 set tabstop=2
 set expandtab
+" Set tabs for ruby
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 " Show “invisible” characters
 "set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 "set list
@@ -278,3 +280,14 @@ command! -bang -nargs=* Rg
 " map <tab> and <shift-tab> to cycle between open buffers
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+
+" Auto remove all trailing whitespace on save
+"autocmd FileType rb,js,jsx,css,scss,php,go,c,cpp BufWritePre <buffer> %s/\s\+$//e
+
+" do not store to register with x, c
+nnoremap x "_x
+nnoremap X "_X
+nnoremap c "_c
+nnoremap C "_C
+vnoremap c "_c
+vnoremap x "_x
