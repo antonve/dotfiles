@@ -1,0 +1,97 @@
+{
+    "title": "CAPS+hjkl Mode + DELETE on df",
+    "rules": [
+        {
+            "description": "Change caps_lock to right_command when pressed with other keys (post escape when pressed alone).",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "caps_lock",
+                        "modifiers": {
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [{"key_code": "right_command"}],
+                    "to_if_alone": [{"key_code": "escape"}]
+                }
+            ]
+        },
+        {
+        	"description": "Change right_command+df to delete and delete forward.",
+        	"manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "d",
+                        "modifiers": {
+                            "mandatory": ["right_command"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [{"key_code": "delete_or_backspace"}]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f",
+                        "modifiers": {
+                            "mandatory": ["right_command"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [{"key_code": "delete_forward"}]
+                }
+        	]
+        },
+        {
+            "description": "Change right_command+hjkl to arrow keys.",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "h",
+                        "modifiers": {
+                            "mandatory": ["right_command"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [{"key_code": "left_arrow"}]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "j",
+                        "modifiers": {
+                            "mandatory": ["right_command"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [{"key_code": "down_arrow"}]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "k",
+                        "modifiers": {
+                            "mandatory": ["right_command"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [{"key_code": "up_arrow"}]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": ["right_command"],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [{"key_code": "right_arrow"}]
+                }
+            ]
+        }
+    ]
+}
