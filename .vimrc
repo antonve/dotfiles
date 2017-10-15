@@ -65,6 +65,8 @@ set tabstop=2
 set expandtab
 " Set tabs for ruby
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+" Set tabs for scss
+autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2
 " Show “invisible” characters
 "set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 "set list
@@ -185,7 +187,7 @@ let g:ag_working_path_mode="r"
 " when running at every change you may want to disable quickfix
 let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
-autocmd BufWritePre,TextChanged,InsertLeave *.jsx,*.js,*.json PrettierAsync
+autocmd BufWritePre *.jsx,*.js,*.json PrettierAsync
 
 " max line lengh that prettier will wrap on
 let g:prettier#config#print_width = 120
@@ -320,3 +322,8 @@ nnoremap c "_c
 nnoremap C "_C
 vnoremap c "_c
 vnoremap x "_x
+
+" Prevent me from going crazy while using YouCompleteMe
+" Pressing enter results in a new line, but this usually selects the current
+" sugggestion in a lot of different autocompleters
+:inoremap <expr> <Enter> pumvisible() ? "<Esc>a" : "<Enter>"

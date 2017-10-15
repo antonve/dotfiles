@@ -1,5 +1,5 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH:/Users/anton/.nodenv/versions/7.2.1/bin";
+export PATH="$HOME/bin:$PATH:/Users/anton/.nodenv/versions/7.2.1/bin:/usr/local/Cellar/node/7.2.0/bin";
 
 # Golang
 export GOPATH="$HOME/xdev/go";
@@ -141,3 +141,4 @@ alias gcm="git commit -m"
 alias nuke="kill -9"
 alias rspec="bundle exec rspec"
 alias werkit="git commit -m \"Rerun tests\" --allow-empty && g push"
+alias tmuxa="tmux attach -t"
