@@ -143,6 +143,9 @@ nnoremap tl		:tablast<CR>
 
 " Vim airline
 let g:airline_powerline_fonts = 1
+" Show tabline bar
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_splits = 1
 
 " Insert newline without entering insert mode
 nmap <S-Enter> O<Esc>
@@ -152,12 +155,18 @@ nmap <CR> o<Esc>
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `s{char}{label}`
-nmap s <Plug>(easymotion-overwin-f)
+map s <Plug>(easymotion-overwin-f)
 let g:EasyMotion_smartcase = 1 " Turn on case insensitive feature
 
 " JK motions: Line motions
+map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+
+" Japanese search in romaji
+let g:EasyMotion_use_migemo = 1
 
 " NERDTree
 nmap <silent> <C-D> :NERDTreeToggle<CR>
@@ -175,7 +184,7 @@ set pastetoggle=<F10>
 set timeoutlen=1000 ttimeoutlen=0
 
 " Expand code with emmet with tab key
-let g:user_emmet_expandabbr_key = '<Tab>'
+"let g:user_emmet_expandabbr_key = '<Tab>'
 
 " CtrlP
 " let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
@@ -327,3 +336,25 @@ vnoremap x "_x
 " Pressing enter results in a new line, but this usually selects the current
 " sugggestion in a lot of different autocompleters
 :inoremap <expr> <Enter> pumvisible() ? "<Esc>a" : "<Enter>"
+
+" Allow vim settings to be overriden in a project
+silent! so .vimlocal
+
+" Set update time for vim-gitgutter
+set updatetime=250
+
+" Quickly edit/reload this configuration file
+nnoremap gev :e $MYVIMRC<CR>
+nnoremap gsv :so $MYVIMRC<CR>
+
+" Allow buffers to be hidden when not saved
+set hid
+
+" Disable error sound
+set noeb
+
+
+" viminfo
+set vi=%,'50
+set vi+=\"100,:100
+set vi+=n~/.viminfo

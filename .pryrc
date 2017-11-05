@@ -54,3 +54,7 @@ end
 def sm_str
   "Uncommonly no it announcing melancholy an in."
 end
+
+def screen_pls
+  save_and_open_screenshot("full.png", full: true)
+end
