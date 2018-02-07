@@ -90,11 +90,16 @@
                         }
                     },
                     "to": [{"key_code": "right_arrow"}]
-                },
+                }
+        	]
+        },
+        {
+            "description": "Change right_command+46 to end/start of line",
+            "manipulators": [
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "$",
+                        "key_code": "4",
                         "modifiers": {
                             "mandatory": ["right_command"],
                             "optional": ["any"]
@@ -108,7 +113,7 @@
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "^",
+                        "key_code": "6",
                         "modifiers": {
                             "mandatory": ["right_command"],
                             "optional": ["any"]
