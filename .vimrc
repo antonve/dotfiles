@@ -7,13 +7,14 @@ if &term =~ '256color'
   set t_ut=
 endif
 
-" Use the Solarized Dark theme
-set t_Co=256
 set background=dark
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-"colorscheme solarized
-colorscheme Benokai
+colorscheme tropikos
+" Use 14pt Monaco
+set guifont=Fira\ Code:h14
+" Don’t blink cursor in normal mode
+set guicursor=n:blinkon0
+" Better line-height
+set linespace=2
 
 " Make Vim more useful
 set nocompatible
@@ -38,15 +39,31 @@ let mapleader=","
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
+
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
+set noswapfile
+"set directory=~/.vim/swaps
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
 
+" Disable folding
+set nofoldenable
+
+" Default location for new buffers
+set splitbelow
+set splitright
+
+" Enable matching of pairs
+set matchpairs+=<:>
+
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
+
+" Set auto indentation
+set autoindent
+set smartindent
 
 " Respect modeline in files
 set modeline
@@ -62,11 +79,17 @@ set cursorline
 " Use spaces instead of tabs
 set shiftwidth=2
 set tabstop=2
+set softtabstop=2
 set expandtab
+set shiftround
 " Set tabs for ruby
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 " Set tabs for scss
 autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2
+" Set tabs for objective-c
+autocmd FileType objc setlocal expandtab shiftwidth=4 tabstop=4
+" Set tabs for swift
+autocmd FileType swift setlocal expandtab shiftwidth=4 tabstop=4
 " Show “invisible” characters
 "set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 "set list
@@ -95,9 +118,9 @@ set title
 " Show the (partial) command as it’s being typed
 set showcmd
 " Use relative line numbers
-if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
+if exists("&relativenumber") && has('gui_running')
+  set relativenumber
+  au BufReadPost * set relativenumber
 endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
@@ -125,6 +148,8 @@ if has("autocmd")
 endif
 
 " Pathogen
+" To disable a plugin, add it's bundle name to the following list
+let g:pathogen_disabled = ['ale', 'vim-startify', 'easymotion']
 execute pathogen#infect()
 
 " Vimwiki
@@ -146,6 +171,7 @@ let g:airline_powerline_fonts = 1
 " Show tabline bar
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_splits = 1
+let g:airline_skip_empty_sections = 1
 
 " Insert newline without entering insert mode
 nmap <S-Enter> O<Esc>
@@ -156,26 +182,25 @@ let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `s{char}{label}`
 map s <Plug>(easymotion-overwin-f)
-let g:EasyMotion_smartcase = 1 " Turn on case insensitive feature
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
 
 " JK motions: Line motions
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
-let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+" keep cursor column when JK motion
+let g:EasyMotion_startofline = 0
 
 " Japanese search in romaji
 let g:EasyMotion_use_migemo = 1
-
-" NERDTree
-nmap <silent> <C-D> :NERDTreeToggle<CR>
 
 " Cancel search
 nnoremap <silent> <C-L> :noh<CR><C-L>
 
 " YouCompleteMe
-let g:ycm_autoclose_preview_window_after_completion = 1
+"let g:ycm_autoclose_preview_window_after_completion = 1
 
 " Paste toggle to F10
 set pastetoggle=<F10>
@@ -183,11 +208,18 @@ set pastetoggle=<F10>
 " Reduce delaying when pressing escape
 set timeoutlen=1000 ttimeoutlen=0
 
-" Expand code with emmet with tab key
-"let g:user_emmet_expandabbr_key = '<Tab>'
+" Expand code with Emmet with tab key
 
-" CtrlP
-" let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+" Don't use Emmet everywhere (don't go crazy)
+let g:user_emmet_install_global=0
+autocmd FileType html,css,jsx EmmetInstall
+
+" Emmet support in JSX
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends' : 'jsx',
+\  },
+\}
 
 " ag.vim
 let g:ag_working_path_mode="r"
@@ -196,7 +228,7 @@ let g:ag_working_path_mode="r"
 " when running at every change you may want to disable quickfix
 let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.jsx,*.js,*.json PrettierAsync
+autocmd BufWritePre *.jsx,*.js,*.ts,*.tsx,*.json PrettierAsync
 
 " max line lengh that prettier will wrap on
 let g:prettier#config#print_width = 120
@@ -229,6 +261,23 @@ let g:prettier#config#parser = 'babylon'
 let g:jsx_ext_required = 0
 
 " fzf
+
+" fzf colors
+
+let g:fzf_colors =
+\ { "fg":      ["fg", "Normal"],
+  \ "bg":      ["bg", "Normal"],
+  \ "hl":      ["fg", "IncSearch"],
+  \ "fg+":     ["fg", "CursorLine", "CursorColumn", "Normal"],
+  \ "bg+":     ["bg", "CursorLine", "CursorColumn"],
+  \ "hl+":     ["fg", "IncSearch"],
+  \ "info":    ["fg", "IncSearch"],
+  \ "border":  ["fg", "Ignore"],
+  \ "prompt":  ["fg", "Comment"],
+  \ "pointer": ["fg", "IncSearch"],
+  \ "marker":  ["fg", "IncSearch"],
+  \ "spinner": ["fg", "IncSearch"],
+  \ "header":  ["fg", "WildMenu"] }
 
 " If installed using Homebrew
 set rtp+=/usr/local/opt/fzf
@@ -335,13 +384,19 @@ vnoremap x "_x
 " Prevent me from going crazy while using YouCompleteMe
 " Pressing enter results in a new line, but this usually selects the current
 " sugggestion in a lot of different autocompleters
-:inoremap <expr> <Enter> pumvisible() ? "<Esc>a" : "<Enter>"
+":inoremap <expr> <Enter> pumvisible() ? "<Esc>a" : "<Enter>"
 
 " Allow vim settings to be overriden in a project
 silent! so .vimlocal
 
 " Set update time for vim-gitgutter
 set updatetime=250
+" Vim 7.4.2201
+if exists('&signcolumn')
+  set signcolumn=yes
+else
+  let g:gitgutter_sign_column_always = 1
+endif
 
 " Quickly edit/reload this configuration file
 nnoremap gev :e $MYVIMRC<CR>
@@ -353,8 +408,33 @@ set hid
 " Disable error sound
 set noeb
 
-
 " viminfo
 set vi=%,'50
 set vi+=\"100,:100
 set vi+=n~/.viminfo
+
+" expand %% to path
+cabbr <expr> %% expand('%:p:h')
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+" deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" NERDCommenter
+let g:NERDDefaultAlign = 'left'
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+let g:NERDSpaceDelims = 1
+
+" don't close window when close buffer
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>.
+
+" Disable annoying netrw
+augroup goodbye_netrw
+  au!
+  autocmd VimEnter * silent! au! FileExplorer *
+augroup END
+
+" Swift linting
+let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
