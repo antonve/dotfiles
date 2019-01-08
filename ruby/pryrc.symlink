@@ -24,37 +24,3 @@ if defined?(PryByebug)
     Pry.commands.alias_command 'b', 'break'
     Pry.commands.alias_command 'bda', 'break --disable-all'
 end
-
-# For rails development
-def me
-  User.find(18424563)
-end
-
-def first_user
-  User.first
-end
-
-def last_user
-  User.last
-end
-
-# Useful Collections
-def a_array
-  (1..8).to_a
-end
-
-def a_hash
-  {id: 5, title: "Hello Ruby", message: "I am Anton", private: true}
-end
-
-def lg_str
- "The knowledge disregards my nominate wallet above a porter. The executive matures in the money. The grandfather orbits above her alert tomato. A chart knocks the staring grave over the balance. Each lit realm argues under the frog."
-end
-
-def sm_str
-  "Uncommonly no it announcing melancholy an in."
-end
-
-def screen_pls
-  save_and_open_screenshot("full.png", full: true)
-end
