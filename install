@@ -1,0 +1,16 @@
+set -Eeuo pipefail
+
+: ${DOTFILES_PATH:="$HOME/dotfiles"}
+
+check_os() {
+  if [ "$(uname -s)" != "Darwin" ]; then
+    echo "These dotfiles require MacOS"
+    exit 1
+  fi
+}
+
+main() {
+    check_os
+}
+
+main
