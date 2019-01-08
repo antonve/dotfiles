@@ -155,3 +155,16 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # Project paths
 alias cdlogger="cd ~/xdev/go/src/github.com/antonve/logger-api/"
+
+# Fix my git typos
+alias got="git"
+alias gut="git"
+alias gitp="git"
+alias ush="push"
+alias gcm="git commit -m"
+
+# Forcefully kill a process
+alias nuke="kill -9"
+
+# Tmux
+alias tmuxa="tmux attach -t"
