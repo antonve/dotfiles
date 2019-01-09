@@ -156,3 +156,6 @@
 [pull]
 
 	rebase = true
+[user]
+	email = 974796+antonve@users.noreply.github.com
+	name = Anton Van Eechaute
