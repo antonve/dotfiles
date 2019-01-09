@@ -119,9 +119,14 @@ install_dotfiles () {
   done
 }
 
+install_homebrew () {
+  $DOTFILES_PATH/homebrew/install.sh 2>&1
+}
+
 main() {
   check_os
   install_dotfiles
+  install_homebrew
 }
 
 main
