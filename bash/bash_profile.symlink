@@ -1,6 +1,7 @@
 # Golang
 export GOPATH="$HOME/xdev/go";
 export PATH="$PATH:$GOPATH/bin";
+export GO111MODULE=on
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
