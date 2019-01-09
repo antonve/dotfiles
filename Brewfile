@@ -1,0 +1,22 @@
+cask_args appdir: '/Applications'
+
+tap 'homebrew/bundle'
+
+brew 'ack'
+brew 'coreutils'
+brew 'go'
+brew 'imagemagick'
+brew 'jq'
+brew 'node'
+brew 'readline'
+brew 'rbenv'
+brew 'screen'
+brew 'tmux'
+brew 'wget'
+brew 'yarn'
+
+cask '1password'
+cask 'firefox'
+cask 'google-chrome'
+cask 'slack'
+cask 'transmission'

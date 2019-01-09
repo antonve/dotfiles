@@ -121,6 +121,7 @@ install_dotfiles () {
 
 install_homebrew () {
   $DOTFILES_PATH/homebrew/install.sh 2>&1
+  brew bundle
 }
 
 main() {
