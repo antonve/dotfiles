@@ -12,6 +12,7 @@ brew 'readline'
 brew 'rbenv'
 brew 'screen'
 brew 'tmux'
+brew 'tree'
 brew 'wget'
 brew 'yarn'
 
