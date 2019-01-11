@@ -4,6 +4,7 @@ tap 'homebrew/bundle'
 
 brew 'ack'
 brew 'coreutils'
+brew 'direnv'
 brew 'go'
 brew 'imagemagick'
 brew 'jq'
