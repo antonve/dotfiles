@@ -18,8 +18,8 @@
             ]
         },
         {
-        	"description": "Change right_command+df to delete and delete forward.",
-        	"manipulators": [
+		"description": "Change right_command+df to delete and delete forward.",
+		"manipulators": [
                 {
                     "type": "basic",
                     "from": {
@@ -42,7 +42,7 @@
                     },
                     "to": [{"key_code": "delete_forward"}]
                 }
-        	]
+		]
         },
         {
             "description": "Change right_command+hjkl to arrow keys.",
@@ -91,7 +91,7 @@
                     },
                     "to": [{"key_code": "right_arrow"}]
                 }
-        	]
+		]
         },
         {
             "description": "Change right_command+46 to end/start of line",

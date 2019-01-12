@@ -124,10 +124,29 @@ install_homebrew () {
   brew bundle
 }
 
+install_karabiner () {
+  info 'Installing karabiner elements configuration...'
+
+  SOURCE="$(realpath ./karabiner)"
+  DESTINATION="$(realpath ~/.config/karabiner)"
+
+  mkdir -p "$DESTINATION" "$DESTINATION/assets/complex_modifications"
+
+  cd "$SOURCE"
+  find * -name "*.json" | while read fn; do
+    if [ ! -f "$DESTINATION/$fn" ]; then
+      ln -s "$SOURCE/$fn" "$DESTINATION/$fn"
+    fi
+  done
+
+  success "Finished karabiner elements configuration"
+}
+
 main() {
   check_os
   install_dotfiles
   install_homebrew
+  install_karabiner
 }
 
 main
