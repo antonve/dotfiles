@@ -108,7 +108,7 @@ link_file () {
 }
 
 install_dotfiles () {
-  info 'installing dotfiles'
+  info 'Installing dotfiles'
 
   local overwrite_all=false backup_all=false skip_all=false
 
