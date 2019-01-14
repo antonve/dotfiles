@@ -20,6 +20,7 @@ brew 'yarn'
 
 cask '1password'
 cask 'alfred'
+cask 'discord'
 cask 'firefox'
 cask 'google-chrome'
 cask 'karabiner-elements'
