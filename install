@@ -130,7 +130,7 @@ install_karabiner () {
   SOURCE="$(realpath ./karabiner)"
   DESTINATION="$(realpath ~/.config/karabiner)"
 
-  mkdir -p "$DESTINATION" "$DESTINATION/assets/complex_modifications"
+  mkdir -p ~/.config "$DESTINATION" "$DESTINATION/assets/complex_modifications"
 
   cd "$SOURCE"
   find * -name "*.json" | while read fn; do
