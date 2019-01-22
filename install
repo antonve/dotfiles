@@ -112,18 +112,6 @@ link_file () {
   fi
 }
 
-install_dotfiles () {
-  info 'Installing dotfiles'
-
-  local overwrite_all=false backup_all=false skip_all=false
-
-  for src in $(find -H "$DOTFILES_PATH" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
-  do
-    dst="$HOME/.$(basename "${src%.*}")"
-    link_file "$src" "$dst"
-  done
-}
-
 install_homebrew () {
   command -v 'brew' > /dev/null 2>&1 && return
 
@@ -159,7 +147,6 @@ provision () {
 
 main() {
   check_os
-  install_dotfiles
   install_homebrew
   install_karabiner
   provision

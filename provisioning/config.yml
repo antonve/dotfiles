@@ -1,4 +1,17 @@
 link:
+  bash/bash_profile:         .bash_profile
+  bash/bashrc:               .bashrc
+  git/gitconfig:             .gitconfig
+  git/gitignore:             .gitignore
+  mac/aliases:               .aliases
+  mac/exports:               .exports
+  mac/hushlogin:             .hushlogin
+  mac/inputrc:               .inputrc
+  ruby/irbrc:                .irbrc
+  ruby/pryrc:                .pryrc
+  screen/screenrc:           .screenrc
+  tmux/tmux.conf:            .tmux.conf
   vim/gvimrc:                .gvimrc
   vim/vimrc:                 .vimrc
   vim:                       .vim
+  wget:                      .wgetrc
