@@ -127,10 +127,12 @@ install_homebrew () {
 }
 
 install_karabiner () {
-  info 'Installing karabiner elements configuration...'
-
   SOURCE="$(realpath ./karabiner)"
   DESTINATION="$(realpath ~/.config/karabiner)"
+
+  [ -d "$SOURCE" ] && return
+
+  info 'Installing karabiner elements configuration...'
 
   mkdir -p ~/.config "$DESTINATION" "$DESTINATION/assets/complex_modifications"
 
