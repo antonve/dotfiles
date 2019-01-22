@@ -3,6 +3,7 @@ cask_args appdir: '/Applications'
 tap 'homebrew/bundle'
 
 brew 'ack'
+brew 'ansible'
 brew 'coreutils'
 brew 'direnv'
 brew 'go'
