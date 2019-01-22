@@ -3,6 +3,11 @@ set -Eeuo pipefail
 
 : ${DOTFILES_PATH:="$HOME/dotfiles"}
 
+ARGS=('')
+for a in "$@"; do
+  ARGS=(${ARGS[@]} "$a")
+done
+
 info() {
   printf "\r  [ \033[00;34m..\033[0m ] $1\n"
 }
@@ -146,11 +151,18 @@ install_karabiner () {
   success "Finished karabiner elements configuration"
 }
 
+provision () {
+  info 'Provisioning machine...'
+  $DOTFILES_PATH/provisioning/run.sh ${ARGS[@]}
+  success 'Finished provisioning machine'
+}
+
 main() {
   check_os
   install_dotfiles
   install_homebrew
   install_karabiner
+  provision
 }
 
 main
