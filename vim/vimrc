@@ -1,5 +1,5 @@
-"=== Environment
-"==============================================================================================
+" === Environment
+" ==============================================================================================
 " Encoding
 set encoding=utf-8
 scriptencoding utf-8
@@ -34,3 +34,36 @@ function! s:vimrc_environment()
 endfunction
 
 let g:env = s:vimrc_environment()
+
+" === Plugins
+" ==============================================================================================
+" This is no longer enabled by default for Neovim,
+" but it's here in case it's running in a different environment
+if &compatible
+  set nocompatible
+endif
+
+if has('vim_starting') " Only on startup, not running if this file is manually sourced
+  " Runtime path, to load plugins from a subdirectory
+  " in this case used to load dein
+  let &g:rtp .= ',' . g:env.path.dein_repo
+endif
+
+let g:dein#_plugins = {}
+
+" Configure dein
+if dein#load_state(g:env.path.dein)
+  call dein#begin(g:env.path.dein, [expand('<sfile>'), g:env.path.dein_toml, g:env.path.dein_lazy_toml])
+
+  call dein#load_toml(g:env.path.dein_toml,      { 'lazy': 0 })
+  call dein#load_toml(g:env.path.dein_lazy_toml, { 'lazy': 1 })
+
+  call dein#end()
+  call dein#save_state()
+endif
+
+if dein#check_install()
+  call dein#install()
+endif
+
+filetype plugin indent o
