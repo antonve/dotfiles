@@ -1,0 +1,48 @@
+" Enable syntax highlighting
+syntax enable
+if &term =~ '256color'
+  " Disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color tmux and GNU screen.
+  " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
+endif
+
+" Theme
+set background=dark
+colorscheme tropikos
+
+" Fonts
+set guifont=Fira\ Code:h14
+
+" Don’t blink cursor in normal mode
+set guicursor=n:blinkon0
+
+" Use the OS clipboard by default (on versions compiled with `+clipboard`)
+if $TMUX == ''
+  set clipboard=unnamed
+endif
+
+" Enhance command-line completion
+if has("wildmenu")
+  set wildmenu " Enables a menu at the bottom of the vim/gvim window
+  set wildmode=longest,full " Similar autocomplete as in the shell
+
+  " Ignore unimportant files
+  set wildignore+=*.a,*.o
+  set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+  set wildignore+=.DS_Store,.git,.hg,.svn
+  set wildignore+=*~,*.swp,*.tmp
+endif
+
+" Function keys that start with an <Esc> are recognized in Insert
+" mode.  When this option is off, the cursor and function keys cannot be
+" used in Insert mode if they start with an <Esc>.  The advantage of
+" this is that the single <Esc> is recognized immediately, instead of
+" after one second.
+set esckeys
+
+" Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode.
+set backspace=indent,eol,start
+
+" Optimize for fast terminal connections
+set ttyfast

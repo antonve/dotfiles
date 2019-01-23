@@ -1,35 +1,3 @@
-" Enable syntax highlighting
-syntax enable
-if &term =~ '256color'
-  " disable Background Color Erase (BCE) so that color schemes
-  " render properly when inside 256-color tmux and GNU screen.
-  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
-  set t_ut=
-endif
-
-set background=dark
-colorscheme tropikos
-" Use 14pt Monaco
-set guifont=Fira\ Code:h14
-" Don’t blink cursor in normal mode
-set guicursor=n:blinkon0
-" Better line-height
-set linespace=2
-
-" Make Vim more useful
-set nocompatible
-" Use the OS clipboard by default (on versions compiled with `+clipboard`)
-"if $TMUX == ''
-set clipboard=unnamed
-"endif
-" Enhance command-line completion
-set wildmenu
-" Allow cursor keys in insert mode
-set esckeys
-" Allow backspace in insert mode
-set backspace=indent,eol,start
-" Optimize for fast terminal connections
-set ttyfast
 " Add the g flag to search/replace by default
 set gdefault
 " Use UTF-8 without BOM
