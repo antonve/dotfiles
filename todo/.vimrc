@@ -25,27 +25,6 @@ set matchpairs+=<:>
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
 
-" Set auto indentation
-set autoindent
-set smartindent
-
-" Respect modeline in files
-set modeline
-set modelines=4
-" Enable per-directory .vimrc files and disable unsafe commands in them
-set exrc
-set secure
-" Enable line numbers
-set number
-" Highlight current line
-set cursorline
-" Make tabs as wide as two spaces
-" Use spaces instead of tabs
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
-set expandtab
-set shiftround
 " Set tabs for ruby
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 " Set tabs for scss
@@ -54,25 +33,8 @@ autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType objc setlocal expandtab shiftwidth=4 tabstop=4
 " Set tabs for swift
 autocmd FileType swift setlocal expandtab shiftwidth=4 tabstop=4
-" Show “invisible” characters
-"set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-"set list
-" Highlight searches
-set hlsearch
-" Ignore case of searches
-set ignorecase
 " Highlight dynamically as pattern is typed
-set incsearch
-" Always show status line
-set laststatus=2
-" Enable mouse in all modes
-set mouse=a
-" Disable error bells
-set noerrorbells
 " Don’t reset cursor to start of line when moving around.
-set nostartofline
-" Show the cursor position
-set ruler
 " Don’t show the intro message when starting Vim
 set shortmess=atI
 " Show the current mode

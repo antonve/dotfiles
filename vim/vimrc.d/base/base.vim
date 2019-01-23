@@ -64,6 +64,9 @@ set formatoptions& formatoptions+=lmoq
 " Disable beeps
 set visualbell t_vb=
 
+" Disable error bells
+set noerrorbells
+
 " Set the initial directory of the file browser to that of the related buffer
 set browsedir=buffer
 
