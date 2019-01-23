@@ -3,17 +3,7 @@ if $TMUX == ''
   set clipboard=unnamed
 endif
 
-" Enhance command-line completion
-if has("wildmenu")
-  set wildmenu " Enables a menu at the bottom of the vim/gvim window
-  set wildmode=longest,full " Similar autocomplete as in the shell
 
-  " Ignore unimportant files
-  set wildignore+=*.a,*.o
-  set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
-  set wildignore+=.DS_Store,.git,.hg,.svn
-  set wildignore+=*~,*.swp,*.tmp
-endif
 
 " Function keys that start with an <Esc> are recognized in Insert
 " mode.  When this option is off, the cursor and function keys cannot be
@@ -21,13 +11,6 @@ endif
 " this is that the single <Esc> is recognized immediately, instead of
 " after one second.
 set esckeys
-
-" Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode.
-set backspace=indent,eol,start
-
-" Optimize for fast terminal connections
-set ttyfast
-
 
 " Add the g flag to search/replace by default
 set gdefault
