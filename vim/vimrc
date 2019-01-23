@@ -1,48 +1,36 @@
-" Enable syntax highlighting
-syntax enable
-if &term =~ '256color'
-  " Disable Background Color Erase (BCE) so that color schemes
-  " render properly when inside 256-color tmux and GNU screen.
-  " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
-  set t_ut=
-endif
+"=== Environment
+"==============================================================================================
+" Encoding
+set encoding=utf-8
+scriptencoding utf-8
 
-" Theme
-set background=dark
-colorscheme tropikos
+" Unregister autocommands
+augroup vimrc
+  autocmd!
+augroup END
 
-" Fonts
-set guifont=Fira\ Code:h14
+" g:env
+function! s:vimrc_environment()
+  let l:env = {}
 
-" Don’t blink cursor in normal mode
-set guicursor=n:blinkon0
+  let l:dotfiles_path = $DOTFILES_PATH
+  if empty(l:dotfiles_path)
+    let l:dotfiles_path = $HOME . '/dotfiles'
+  endif
 
-" Use the OS clipboard by default (on versions compiled with `+clipboard`)
-if $TMUX == ''
-  set clipboard=unnamed
-endif
+  let l:vim_path = l:dotfiles_path . '/vim'
 
-" Enhance command-line completion
-if has("wildmenu")
-  set wildmenu " Enables a menu at the bottom of the vim/gvim window
-  set wildmode=longest,full " Similar autocomplete as in the shell
+  let l:env.path = {
+    \ 'dotfiles':       l:dotfiles_path,
+    \ 'dein':           l:vim_path . '/dein',
+    \ 'dein_repo':      l:vim_path . '/dein/repos/github.com/Shougo/dein.vim',
+    \ 'dein_toml':      l:vim_path . '/dein.toml',
+    \ 'dein_lazy_toml': l:vim_path . '/dein_lazy.toml',
+    \ 'vimrcd':         l:vim_path . '/vimrc.d',
+    \ 'runtime':        '/usr/local/opt/macvim/MacVim.app/Contents/Resources/vim/runtime',
+  \ }
 
-  " Ignore unimportant files
-  set wildignore+=*.a,*.o
-  set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
-  set wildignore+=.DS_Store,.git,.hg,.svn
-  set wildignore+=*~,*.swp,*.tmp
-endif
+  return l:env
+endfunction
 
-" Function keys that start with an <Esc> are recognized in Insert
-" mode.  When this option is off, the cursor and function keys cannot be
-" used in Insert mode if they start with an <Esc>.  The advantage of
-" this is that the single <Esc> is recognized immediately, instead of
-" after one second.
-set esckeys
-
-" Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode.
-set backspace=indent,eol,start
-
-" Optimize for fast terminal connections
-set ttyfast
+let g:env = s:vimrc_environment()
