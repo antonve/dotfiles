@@ -1,6 +1,5 @@
 " Theme
 set background=dark
-colorscheme solarized
 
 " Fonts
 set guifont=Fira\ Code:h14

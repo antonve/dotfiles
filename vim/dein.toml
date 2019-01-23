@@ -17,3 +17,5 @@ repo = 'Shougo/dein.vim'
 
 #  Appearance
 #-----------------------------------------------
+[[plugins]] # candle theme
+repo = 'creasty/candle.vim'
