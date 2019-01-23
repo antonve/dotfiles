@@ -1,10 +1,3 @@
-" Use the OS clipboard by default (on versions compiled with `+clipboard`)
-if $TMUX == ''
-  set clipboard=unnamed
-endif
-
-
-
 " Function keys that start with an <Esc> are recognized in Insert
 " mode.  When this option is off, the cursor and function keys cannot be
 " used in Insert mode if they start with an <Esc>.  The advantage of
@@ -14,10 +7,6 @@ set esckeys
 
 " Add the g flag to search/replace by default
 set gdefault
-" Use UTF-8 without BOM
-set encoding=utf-8 nobomb
-" Change mapleader
-let mapleader=","
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
@@ -29,13 +18,6 @@ set noswapfile
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
-
-" Disable folding
-set nofoldenable
-
-" Default location for new buffers
-set splitbelow
-set splitright
 
 " Enable matching of pairs
 set matchpairs+=<:>
