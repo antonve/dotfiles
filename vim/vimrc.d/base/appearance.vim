@@ -62,6 +62,9 @@ endif
 set colorcolumn=90
 hi ColorColumn guibg=#1f1f1f ctermbg=234
 
+" Disable folding
+set nofoldenable
+
 
 "  Custom highlight
 "-----------------------------------------------
