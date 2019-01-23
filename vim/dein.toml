@@ -1,0 +1,21 @@
+#  Base
+#-----------------------------------------------
+[[plugins]] # dark powered vim/neovim plugin manager
+repo = 'Shougo/dein.vim'
+
+
+#  Editing
+#-----------------------------------------------
+
+
+#  Completion
+#-----------------------------------------------
+
+#  Utils
+#-----------------------------------------------
+
+
+#  Appearance
+#-----------------------------------------------
+[[plugins]] # candle theme
+repo = 'creasty/candle.vim'

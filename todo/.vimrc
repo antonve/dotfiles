@@ -1,41 +1,12 @@
-" Enable syntax highlighting
-syntax enable
-if &term =~ '256color'
-  " disable Background Color Erase (BCE) so that color schemes
-  " render properly when inside 256-color tmux and GNU screen.
-  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
-  set t_ut=
-endif
-
-set background=dark
-colorscheme tropikos
-" Use 14pt Monaco
-set guifont=Fira\ Code:h14
-" Don’t blink cursor in normal mode
-set guicursor=n:blinkon0
-" Better line-height
-set linespace=2
-
-" Make Vim more useful
-set nocompatible
-" Use the OS clipboard by default (on versions compiled with `+clipboard`)
-"if $TMUX == ''
-set clipboard=unnamed
-"endif
-" Enhance command-line completion
-set wildmenu
-" Allow cursor keys in insert mode
+" Function keys that start with an <Esc> are recognized in Insert
+" mode.  When this option is off, the cursor and function keys cannot be
+" used in Insert mode if they start with an <Esc>.  The advantage of
+" this is that the single <Esc> is recognized immediately, instead of
+" after one second.
 set esckeys
-" Allow backspace in insert mode
-set backspace=indent,eol,start
-" Optimize for fast terminal connections
-set ttyfast
+
 " Add the g flag to search/replace by default
 set gdefault
-" Use UTF-8 without BOM
-set encoding=utf-8 nobomb
-" Change mapleader
-let mapleader=","
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
@@ -48,40 +19,12 @@ if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
 
-" Disable folding
-set nofoldenable
-
-" Default location for new buffers
-set splitbelow
-set splitright
-
 " Enable matching of pairs
 set matchpairs+=<:>
 
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
 
-" Set auto indentation
-set autoindent
-set smartindent
-
-" Respect modeline in files
-set modeline
-set modelines=4
-" Enable per-directory .vimrc files and disable unsafe commands in them
-set exrc
-set secure
-" Enable line numbers
-set number
-" Highlight current line
-set cursorline
-" Make tabs as wide as two spaces
-" Use spaces instead of tabs
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
-set expandtab
-set shiftround
 " Set tabs for ruby
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 " Set tabs for scss
@@ -90,25 +33,8 @@ autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType objc setlocal expandtab shiftwidth=4 tabstop=4
 " Set tabs for swift
 autocmd FileType swift setlocal expandtab shiftwidth=4 tabstop=4
-" Show “invisible” characters
-"set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-"set list
-" Highlight searches
-set hlsearch
-" Ignore case of searches
-set ignorecase
 " Highlight dynamically as pattern is typed
-set incsearch
-" Always show status line
-set laststatus=2
-" Enable mouse in all modes
-set mouse=a
-" Disable error bells
-set noerrorbells
 " Don’t reset cursor to start of line when moving around.
-set nostartofline
-" Show the cursor position
-set ruler
 " Don’t show the intro message when starting Vim
 set shortmess=atI
 " Show the current mode

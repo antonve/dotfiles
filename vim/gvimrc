@@ -1,0 +1,65 @@
+" Theme
+set background=dark
+
+" Fonts
+set guifont=Fira\ Code:h14
+
+" Better line-height
+set linespace=2
+
+" Don’t blink cursor in normal mode
+set guicursor=n:blinkon0
+
+" Maximize window
+set lines=999 columns=9999
+
+" Reset guioptions
+set guioptions&
+
+" Use console dialogs instead of popup dialogs for simple choices
+set guioptions+=c " Use console dialogs instead of popup dialogs for simple choices.
+
+" Hide menu & toolbars
+set guioptions-=T " Include Toolbar.
+set guioptions-=m " Menu bar is present.
+
+" Hide scrollbars
+set guioptions-=r " Right-hand scrollbar is always present.
+set guioptions-=l " Left-hand scrollbar is always present.
+set guioptions-=b " Bottom (horizontal) scrollbar is present.
+set guioptions-=L " Left-hand scrollbar is present when there is a vertically split window.
+set guioptions-=R " Right-hand scrollbar is present when there is a vertically split window.
+
+" Disable gui tabline
+set guioptions-=e
+
+" Hide mouse after chars typed
+" When on, the mouse pointer is hidden when characters are typed.
+" The mouse pointer is restored when the mouse is moved
+set mousehide
+
+" Disable mouse
+set mouse= " Enable the use of the mouse. Empty means disabled.
+
+" Disable mouse scrolling
+nmap <ScrollWheelUp> <nop>
+nmap <S-ScrollWheelUp> <nop>
+nmap <C-ScrollWheelUp> <nop>
+nmap <ScrollWheelDown> <nop>
+nmap <S-ScrollWheelDown> <nop>
+nmap <C-ScrollWheelDown> <nop>
+nmap <ScrollWheelLeft> <nop>
+nmap <S-ScrollWheelLeft> <nop>
+nmap <C-ScrollWheelLeft> <nop>
+nmap <ScrollWheelRight> <nop>
+nmap <S-ScrollWheelRight> <nop>
+nmap <C-ScrollWheelRight> <nop>
+
+" Make tabs more readable
+" When nonempty describes the text to use in a label of the GUI tab
+" pages line.  When empty and when the result is empty Vim will use a
+" default label.
+set guitablabel=%N\ %t%M " {tab number} {filename without path}{modified flag}
+
+" Send print jobs to Preview.app
+set printexpr=system('open\ -a\ Preview\ '.v:fname_in)\ +\ v:shell_error

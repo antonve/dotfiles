@@ -1,0 +1,8 @@
+vim/.netrwhist
+vim/init.vim
+vim/dein/*
+
+provisioning/playbook.retry
+provisioning/secrets.yml
+
+!.gitkeep

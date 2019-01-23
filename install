@@ -3,6 +3,11 @@ set -Eeuo pipefail
 
 : ${DOTFILES_PATH:="$HOME/dotfiles"}
 
+ARGS=('')
+for a in "$@"; do
+  ARGS=(${ARGS[@]} "$a")
+done
+
 info() {
   printf "\r  [ \033[00;34m..\033[0m ] $1\n"
 }
@@ -107,28 +112,20 @@ link_file () {
   fi
 }
 
-install_dotfiles () {
-  info 'Installing dotfiles'
-
-  local overwrite_all=false backup_all=false skip_all=false
-
-  for src in $(find -H "$DOTFILES_PATH" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
-  do
-    dst="$HOME/.$(basename "${src%.*}")"
-    link_file "$src" "$dst"
-  done
-}
-
 install_homebrew () {
+  command -v 'brew' > /dev/null 2>&1 && return
+
   $DOTFILES_PATH/homebrew/install.sh 2>&1
   brew bundle
 }
 
 install_karabiner () {
-  info 'Installing karabiner elements configuration...'
-
   SOURCE="$(realpath ./karabiner)"
   DESTINATION="$(realpath ~/.config/karabiner)"
+
+  [ -d "$SOURCE" ] && return
+
+  info 'Installing karabiner elements configuration...'
 
   mkdir -p ~/.config "$DESTINATION" "$DESTINATION/assets/complex_modifications"
 
@@ -142,11 +139,17 @@ install_karabiner () {
   success "Finished karabiner elements configuration"
 }
 
+provision () {
+  info 'Provisioning machine...'
+  $DOTFILES_PATH/provisioning/run.sh ${ARGS[@]}
+  success 'Finished provisioning machine'
+}
+
 main() {
   check_os
-  install_dotfiles
   install_homebrew
   install_karabiner
+  provision
 }
 
 main
