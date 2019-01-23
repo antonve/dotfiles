@@ -1,23 +1,3 @@
-
-" Enable syntax highlighting
-syntax enable
-if &term =~ '256color'
-  " Disable Background Color Erase (BCE) so that color schemes
-  " render properly when inside 256-color tmux and GNU screen.
-  " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
-  set t_ut=
-endif
-
-" Theme
-set background=dark
-colorscheme tropikos
-
-" Fonts
-set guifont=Fira\ Code:h14
-
-" Don’t blink cursor in normal mode
-set guicursor=n:blinkon0
-
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 if $TMUX == ''
   set clipboard=unnamed
