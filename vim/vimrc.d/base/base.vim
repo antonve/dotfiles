@@ -149,6 +149,9 @@ set incsearch
 " Match highlight
 set hlsearch
 
+" Enable matching of <> pairs
+set matchpairs+=<:>
+
 " Add the g flag to search/replace by default
 set gdefault
 
