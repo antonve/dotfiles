@@ -87,3 +87,6 @@ autocmd vimrc BufEnter * :silent! checktime
 
 " Allow vim settings to be overriden in a project
 silent! so .vimlocal
+
+" Expand %% to path
+cabbr <expr> %% expand('%:p:h')
