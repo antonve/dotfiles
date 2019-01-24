@@ -84,3 +84,6 @@ command! ScopeInfo echo map(synstack(line('.'), col('.')), 'synIDattr(synIDtrans
 
 " Forcibly reload file
 autocmd vimrc BufEnter * :silent! checktime
+
+" Allow vim settings to be overriden in a project
+silent! so .vimlocal
