@@ -90,3 +90,6 @@ silent! so .vimlocal
 
 " Expand %% to path
 cabbr <expr> %% expand('%:p:h')
+
+" Don't close window when close buffer
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>.
