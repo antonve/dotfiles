@@ -88,11 +88,6 @@ let g:prettier#config#parser = 'babylon'
 " JSX
 let g:jsx_ext_required = 0
 
-" buffers
-" map <tab> and <shift-tab> to cycle between open buffers
-nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
-nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
-
 " Allow buffers to be hidden when not saved
 set hid
 
