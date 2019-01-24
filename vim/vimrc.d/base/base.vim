@@ -38,9 +38,6 @@ let g:mapleader = ','
 set splitright
 set splitbelow
 
-" Use double width to print non-ascii charactors
-set ambiwidth=double
-
 " Line offset when scrolling
 set scrolloff=5
 
