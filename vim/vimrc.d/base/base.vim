@@ -149,6 +149,9 @@ set incsearch
 " Match highlight
 set hlsearch
 
+" Add the g flag to search/replace by default
+set gdefault
+
 " Dim match highlight
 nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 
