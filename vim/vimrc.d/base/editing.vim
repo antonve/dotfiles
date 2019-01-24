@@ -121,6 +121,9 @@ map <Space>a ggVG
 " Avoid suicide
 nnoremap ZQ <Nop>
 
+" Save a file as root (<leader>W)
+noremap <leader>W :w !sudo tee % > /dev/null<CR>
+
 " Disable annoying bug when using uppercase K in visual mode
 vnoremap K <Nop>
 
