@@ -29,6 +29,9 @@ let g:fzf_layout = { 'down': '~40%' }
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+
 " Detect if the current directory is part of a git repo
 function! s:is_git_repo() abort
   if executable('git')
