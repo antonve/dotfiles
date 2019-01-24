@@ -45,6 +45,7 @@ nmap <C-s> <C-w>
 
 " edit configurations
 command! Vimrc edit $MYVIMRC
+command! VimrcReload so $MYVIMRC
 command! Dotfiles exec 'lcd' g:env.path.dotfiles
 command! MacVim exec 'lcd' g:env.path.runtime
 
