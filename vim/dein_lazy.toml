@@ -4,3 +4,10 @@
 
 #  Completion
 #-----------------------------------------------
+
+
+#  Navigation
+#-----------------------------------------------
+[[plugins]] # fzf ❤️ vim, A command-line fuzzy finder
+repo  = 'junegunn/fzf.vim'
+on_if = 1

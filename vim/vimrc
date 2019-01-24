@@ -96,6 +96,9 @@ call s:load_file('custom/text_objects')
 if dein#tap('dein.vim')
   call s:load_file('plugin/dein')
 endif
+if dein#tap('fzf.vim')
+  call s:load_file('plugin/fzf')
+endif
 " if dein#tap('vim-textobj-multiblock')
 "   call s:load_file('plugin/vim-textobj-multiblock')
 " endif
