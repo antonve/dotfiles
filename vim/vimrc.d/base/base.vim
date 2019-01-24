@@ -48,6 +48,9 @@ set textwidth=0
 set nobackup
 set noswapfile
 
+" Don’t create backups when editing files in certain directories
+set backupskip=/tmp/*,/private/tmp/*
+
 " Reload files when modified outside of vim
 set autoread
 
