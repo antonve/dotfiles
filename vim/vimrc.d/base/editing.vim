@@ -156,6 +156,12 @@ nnoremap <C-w>d :quit<CR>
 nnoremap <C-w><C-n> gt
 nnoremap <C-w><C-b> gT
 
+nnoremap tn		:tabnew<Space>
+nnoremap tk		:tabnext<CR>
+nnoremap tj		:tabprev<CR>
+nnoremap th		:tabfirst<CR>
+nnoremap tl		:tablast<CR>
+
 " Remove trailing spaces before saving
 autocmd vimrc BufWritePre *
   \ if &ft != 'markdown' |
