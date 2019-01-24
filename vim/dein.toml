@@ -6,7 +6,8 @@ repo = 'Shougo/dein.vim'
 
 #  Editing
 #-----------------------------------------------
-
+[[plugins]] # Vim plugin for intensely orgasmic commenting
+repo = 'scrooloose/nerdcommenter'
 
 #  Completion
 #-----------------------------------------------

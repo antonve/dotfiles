@@ -99,6 +99,9 @@ endif
 if dein#tap('fzf.vim')
   call s:load_file('plugin/fzf')
 endif
+if dein#tap('nerdcommenter')
+  call s:load_file('plugin/nerdcommenter')
+endif
 " if dein#tap('vim-textobj-multiblock')
 "   call s:load_file('plugin/vim-textobj-multiblock')
 " endif
