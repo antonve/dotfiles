@@ -88,9 +88,6 @@ let g:prettier#config#parser = 'babylon'
 " JSX
 let g:jsx_ext_required = 0
 
-" Allow buffers to be hidden when not saved
-set hid
-
 " deoplete
 let g:deoplete#enable_at_startup = 1
 " deoplete tab-complete
