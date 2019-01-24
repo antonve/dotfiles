@@ -185,3 +185,6 @@ endif
 
 " Spell checking in American English
 set spelllang=en_us
+
+" Don’t show the intro message when starting Vim
+set shortmess=atI
