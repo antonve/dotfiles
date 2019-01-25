@@ -9,8 +9,20 @@ repo = 'Shougo/dein.vim'
 [[plugins]] # Vim plugin for intensely orgasmic commenting
 repo = 'scrooloose/nerdcommenter'
 
-#  Completion
+#  Auto-completion
 #-----------------------------------------------
+[[plugins]] # yet another remote plugin framework for neovim
+repo = 'roxma/nvim-yarp'
+if   = "!has('nvim')"
+
+[[plugins]] # a compatibility layer for neovim rpc client working on vim8
+repo = 'roxma/vim-hug-neovim-rpc'
+if   = "!has('nvim')"
+
+[[plugins]] # dark powered asynchronous completion framework for neovim/vim8
+repo    = 'Shougo/deoplete.nvim'
+depends = ['nvim-yarp', 'vim-hug-neovim-rpc']
+
 
 #  Utils
 #-----------------------------------------------
