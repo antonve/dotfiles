@@ -1,3 +1,9 @@
+#  Base
+#-----------------------------------------------
+[[plugins]] # a Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
+repo  = 'airblade/vim-gitgutter'
+on_if = 1
+
 #  Editing
 #-----------------------------------------------
 
@@ -7,7 +13,7 @@
 [[plugins]] # syntax source for neocomplete/deoplete/ncm
 repo    = 'Shougo/neco-syntax'
 depends = ['deoplete.nvim']
-on_i    = 1
+on_if    = 1
 hook_source = '''
 let g:necosyntax#min_keyword_length = 3
 '''
