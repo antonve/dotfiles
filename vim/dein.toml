@@ -6,8 +6,11 @@ repo = 'Shougo/dein.vim'
 
 #  Editing
 #-----------------------------------------------
-[[plugins]] # Vim plugin for intensely orgasmic commenting
+[[plugins]] # vim plugin for intensely orgasmic commenting
 repo = 'scrooloose/nerdcommenter'
+
+[[plugins]] # deleting, changing, and adding surroundings
+repo = 'vim-scripts/surround.vim'
 
 #  Auto-completion
 #-----------------------------------------------

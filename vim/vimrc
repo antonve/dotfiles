@@ -105,11 +105,11 @@ endif
 if dein#tap('deoplete.nvim')
   call s:load_file('plugin/deoplete')
 endif
+if dein#tap('surround.vim')
+  call s:load_file('plugin/surround')
+endif
 " if dein#tap('vim-textobj-multiblock')
 "   call s:load_file('plugin/vim-textobj-multiblock')
-" endif
-" if dein#tap('surround.vim')
-"   call s:load_file('plugin/surround')
 " endif
 " if dein#tap('vim-easy-align')
 "   call s:load_file('plugin/vim-easy-align')
