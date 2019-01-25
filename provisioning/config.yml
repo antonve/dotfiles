@@ -1,3 +1,40 @@
+homebrew:
+  applications:
+    - 1password
+    - alfred
+    - discord
+    - firefox
+    - gitify
+    - google-chrome
+    - insomnia
+    - karabiner-elements
+    - keybase
+    - postgres
+    - quicklook-json
+    - slack
+    - spotify
+    - transmission
+    - visual-studio-code
+
+  packages:
+    - ack
+    - coreutils
+    - direnv
+    - fzf
+    - go
+    - imagemagick
+    - jq
+    - node
+    - pgweb
+    - rbenv
+    - readline
+    - ripgrep
+    - screen
+    - tmux
+    - tree
+    - wget
+    - yarn
+
 link:
   bash/bash_profile:         .bash_profile
   bash/bashrc:               .bashrc

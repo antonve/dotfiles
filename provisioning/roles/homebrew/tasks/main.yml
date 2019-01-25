@@ -1,0 +1,18 @@
+- set_fact:
+    homebrew: {}
+
+- name: update homebrew
+  homebrew:
+    update_homebrew: yes
+
+- name: install cask applications
+  homebrew_cask:
+    name:  '{{ homebrew.applications }}'
+    state: present
+  when: homebrew.applications
+
+- name: install homebrew packages
+  homebrew:
+    name:  '{{ homebrew.packages }}'
+    state: present
+  when: homebrew.packages

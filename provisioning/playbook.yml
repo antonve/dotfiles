@@ -13,6 +13,11 @@
     - role: link
       tags: ['basic', 'link']
 
+    #  install
+    #-----------------------------------------------
+    - role: homebrew
+      tags: ['install', 'homebrew']
+
     #  app
     #-----------------------------------------------
     - role: vim
