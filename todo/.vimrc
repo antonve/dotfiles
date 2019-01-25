@@ -9,14 +9,6 @@ autocmd FileType objc setlocal expandtab shiftwidth=4 tabstop=4
 " Set tabs for swift
 autocmd FileType swift setlocal expandtab shiftwidth=4 tabstop=4
 
-
-" Vimwiki
-filetype plugin indent on
-let g:vimwiki_list = [{'path': '$HOME/xdev/wiki'}]
-let g:vimwiki_dir_link = 'index'
-let g:vimwiki_hl_headers = 1
-let g:vimwiki_hl_cb_checked = 1
-
 " Easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
@@ -35,12 +27,6 @@ let g:EasyMotion_startofline = 0
 
 " Japanese search in romaji
 let g:EasyMotion_use_migemo = 1
-
-" Expand code with Emmet with tab key
-
-" Don't use Emmet everywhere (don't go crazy)
-let g:user_emmet_install_global=0
-autocmd FileType html,css,jsx EmmetInstall
 
 " ag.vim
 let g:ag_working_path_mode="r"
@@ -80,8 +66,3 @@ let g:prettier#config#parser = 'babylon'
 
 " JSX
 let g:jsx_ext_required = 0
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
-" deoplete tab-complete
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
