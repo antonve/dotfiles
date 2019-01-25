@@ -111,6 +111,9 @@ endif
 if dein#tap('emmet-vim')
   call s:load_file('plugin/emmet-vim')
 endif
+if dein#tap('vim-easymotion')
+  call s:load_file('plugin/easymotion')
+endif
 " if dein#tap('vim-textobj-multiblock')
 "   call s:load_file('plugin/vim-textobj-multiblock')
 " endif

@@ -12,6 +12,10 @@ repo = 'scrooloose/nerdcommenter'
 [[plugins]] # deleting, changing, and adding surroundings
 repo = 'vim-scripts/surround.vim'
 
+[[plugins]] # vim motions on speed!
+repo = 'easymotion/vim-easymotion'
+
+
 #  Auto-completion
 #-----------------------------------------------
 [[plugins]] # yet another remote plugin framework for neovim
