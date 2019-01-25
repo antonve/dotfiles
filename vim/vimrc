@@ -108,14 +108,14 @@ endif
 if dein#tap('surround.vim')
   call s:load_file('plugin/surround')
 endif
+if dein#tap('emmet-vim')
+  call s:load_file('plugin/emmet-vim')
+endif
 " if dein#tap('vim-textobj-multiblock')
 "   call s:load_file('plugin/vim-textobj-multiblock')
 " endif
 " if dein#tap('vim-easy-align')
 "   call s:load_file('plugin/vim-easy-align')
-" endif
-" if dein#tap('emmet-vim')
-"   call s:load_file('plugin/emmet-vim')
 " endif
 " if dein#tap('operator-camelize.vim')
 "   call s:load_file('plugin/operator-camelize')

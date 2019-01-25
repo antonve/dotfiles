@@ -42,13 +42,6 @@ let g:EasyMotion_use_migemo = 1
 let g:user_emmet_install_global=0
 autocmd FileType html,css,jsx EmmetInstall
 
-" Emmet support in JSX
-let g:user_emmet_settings = {
-\  'javascript.jsx' : {
-\      'extends' : 'jsx',
-\  },
-\}
-
 " ag.vim
 let g:ag_working_path_mode="r"
 
