@@ -29,6 +29,8 @@ depends = ['nvim-yarp', 'vim-hug-neovim-rpc']
 
 #  Utils
 #-----------------------------------------------
+[[plugins]] # a git wrapper so awesome, it should be illegal
+repo = 'tpope/vim-fugitive'
 
 
 #  Appearance
