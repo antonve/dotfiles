@@ -109,7 +109,7 @@ if dein#tap('surround.vim')
   call s:load_file('plugin/surround')
 endif
 if dein#tap('emmet-vim')
-  call s:load_file('plugin/emmet-vim')
+  call s:load_file('plugin/emmet')
 endif
 if dein#tap('vim-easymotion')
   call s:load_file('plugin/easymotion')
