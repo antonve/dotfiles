@@ -52,3 +52,4 @@ link:
   vim/vimrc:                 .vimrc
   vim:                       .vim
   wget:                      .wgetrc
+  karabiner:                 .config/karabiner

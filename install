@@ -51,26 +51,6 @@ install_ansible () {
   success 'Finished installing ansible'
 }
 
-install_karabiner () {
-  SOURCE="$(realpath ./karabiner)"
-  DESTINATION="$(realpath ~/.config/karabiner)"
-
-  [ -d "$SOURCE" ] && return
-
-  info 'Installing karabiner elements configuration...'
-
-  mkdir -p ~/.config "$DESTINATION" "$DESTINATION/assets/complex_modifications"
-
-  cd "$SOURCE"
-  find * -name "*.json" | while read fn; do
-    if [ ! -f "$DESTINATION/$fn" ]; then
-      ln -s "$SOURCE/$fn" "$DESTINATION/$fn"
-    fi
-  done
-
-  success "Finished karabiner elements configuration"
-}
-
 provision () {
   info 'Provisioning machine...'
   $DOTFILES_PATH/provisioning/run.sh ${ARGS[@]}
@@ -81,7 +61,6 @@ main() {
   check_os
   install_homebrew
   install_ansible
-  install_karabiner
   provision
 }
 
