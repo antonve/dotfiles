@@ -8,6 +8,13 @@ on_if = 1
 #-----------------------------------------------
 
 
+#  Programming languages
+#-----------------------------------------------
+[[plugins]] # go development plugin for Vim
+repo  = 'fatih/vim-go'
+on_ft = ['go']
+
+
 #  Completion
 #-----------------------------------------------
 [[plugins]] # syntax source for neocomplete/deoplete/ncm
