@@ -18,6 +18,11 @@
     - role: homebrew
       tags: ['install', 'homebrew']
 
+    #  programming languages
+    #-----------------------------------------------
+    - role: golang
+      tags: ['languages', 'golang']
+
     #  app
     #-----------------------------------------------
     - role: vim
