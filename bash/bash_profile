@@ -1,7 +1,10 @@
-# Load the shell dotfiles, and then some:
-# * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+# Base configs
+for file in ~/bashrc.d/base/{exports,aliases}; do
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+
+# Programming language configs
+for file in ~/bashrc.d/language/{golang}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -37,6 +40,3 @@ eval "$(direnv hook bash)"
 
 # Load fzf config
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# Load configs
-[ -f ~/bashrc.d/languages/golang ] && source ~/bashrc.d/languages/golang
