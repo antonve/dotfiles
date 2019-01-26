@@ -1,16 +1,13 @@
-# Base configs
-for file in ~/bashrc.d/base/{aliases,autocomplete,exports}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+config_paths=(
+  ~/bashrc.d/base/{aliases,autocomplete,exports}.bash
+  ~/bashrc.d/envs/direnv.bash
+  ~/bashrc.d/language/golang.bash
+  ~/bashrc.d/tools/fzf.bash
+)
+
+for configs in "${config_paths[@]}"; do
+  for file in $configs; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+  done;
 done;
-
-# Programming language configs
-for file in ~/bashrc.d/language/{golang}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
-
-# Load direnv
-eval "$(direnv hook bash)"
-
-# Load fzf config
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+unset file configs config_paths;
