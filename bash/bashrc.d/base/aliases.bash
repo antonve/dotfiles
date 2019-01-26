@@ -14,6 +14,7 @@ alias cdgo="cd $GOPATH/src/github.com"
 alias g="git"
 alias h="history"
 alias j="jobs"
+alias reloadprofile="source ~/.bash_profile"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
