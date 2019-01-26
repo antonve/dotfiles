@@ -38,6 +38,7 @@ homebrew:
 link:
   bash/bash_profile:         .bash_profile
   bash/bashrc:               .bashrc
+  bash/bashrc.d:             bashrc.d
   git/gitconfig:             .gitconfig
   git/gitignore:             .gitignore
   mac/aliases:               .aliases
