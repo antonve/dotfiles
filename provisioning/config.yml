@@ -58,7 +58,7 @@ link:
 golang:
   packages:
     # dev tools
-    - golang.org/x/lint/golint      # Golint is a linter for Go source code
-    - github.com/nsf/gocode         # An autocompletion daemon for the Go programming language
-    - github.com/rogpeppe/godef     # find symbol information in Go source
-    - github.com/izumin5210/gex     # Dev tool dependency manager
+    - golang.org/x/lint/golint           # Golint is a linter for Go source code
+    - github.com/nsf/gocode              # An autocompletion daemon for the Go programming language
+    - github.com/rogpeppe/godef          # find symbol information in Go source
+    - github.com/izumin5210/gex/cmd/gex  # Dev tool dependency manager
