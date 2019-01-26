@@ -11,6 +11,7 @@ alias -- -="cd -"
 # Shortcuts
 alias x="cd ~/xdev"
 alias cdgo="cd $GOPATH/src/github.com"
+alias cddot="cd ~/dotfiles"
 alias g="git"
 alias h="history"
 alias j="jobs"
