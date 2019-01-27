@@ -15,5 +15,8 @@ colour=magenta
 regexp=--- FAIL: .*
 colour=red
 -
+regexp=^\s\s\s\s.*
+colour=blue
+-
 regexp=[^\s]+\.go(:\d+)?
-colour=cyan
+colour=yellow
