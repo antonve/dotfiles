@@ -22,6 +22,7 @@ homebrew:
     - direnv
     - fzf
     - go
+    - grc
     - imagemagick
     - jq
     - node
@@ -41,6 +42,8 @@ link:
   bash/bashrc.d:             bashrc.d
   git/gitconfig:             .gitconfig
   git/gitignore:             .gitignore
+  grc:                       .grc
+  karabiner:                 .config/karabiner
   mac/aliases:               .aliases
   mac/exports:               .exports
   mac/hushlogin:             .hushlogin
@@ -53,7 +56,6 @@ link:
   vim/vimrc:                 .vimrc
   vim:                       .vim
   wget:                      .wgetrc
-  karabiner:                 .config/karabiner
 
 golang:
   packages:
