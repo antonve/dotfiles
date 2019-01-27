@@ -13,8 +13,10 @@ alias x="cd ~/xdev"
 alias cdgo="cd $GOPATH/src/github.com"
 alias cddot="cd ~/dotfiles"
 alias g="git"
+alias go="grc go"
 alias h="history"
 alias j="jobs"
+alias make="grc make"
 alias reloadprofile="source ~/.bash_profile"
 
 # Detect which `ls` flavor is in use
