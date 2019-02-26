@@ -178,3 +178,8 @@ alias tmuxa="tmux attach -t"
 # Git email management
 alias gsetpersonal="git config user.email 974796+antonve@users.noreply.github.com && git config user.email"
 alias gsetwork="git config user.email anton.van.eechaute@reaktor.com && git config user.email"
+
+# Git rebasing
+ribase () {
+  git rebase -i HEAD~"$1"
+}
