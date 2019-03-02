@@ -1,7 +1,7 @@
 config_paths=(
+  ~/bashrc.d/languages/golang.bash
   ~/bashrc.d/base/{aliases,autocomplete,exports}.bash
   ~/bashrc.d/envs/direnv.bash
-  ~/bashrc.d/languages/golang.bash
   ~/bashrc.d/tools/fzf.bash
 )
 
