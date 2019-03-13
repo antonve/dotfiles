@@ -3,6 +3,7 @@ homebrew:
     - 1password
     - alfred
     - discord
+    - docker
     - firefox
     - gitify
     - google-chrome
@@ -20,6 +21,7 @@ homebrew:
     - ack
     - coreutils
     - direnv
+    - docker
     - envchain
     - fzf
     - go
