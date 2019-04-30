@@ -156,11 +156,11 @@ nnoremap <C-w>d :quit<CR>
 nnoremap <C-w><C-n> gt
 nnoremap <C-w><C-b> gT
 
-nnoremap tn  	:tabnew<Space>
-nnoremap tk  	:tabnext<CR>
-nnoremap tj  	:tabprev<CR>
-nnoremap th  	:tabfirst<CR>
-nnoremap tl  	:tablast<CR>
+nnoremap tn    :tabnew<CR>
+nnoremap tk    :tabnext<CR>
+nnoremap tj    :tabprev<CR>
+nnoremap th    :tabfirst<CR>
+nnoremap tl    :tablast<CR>
 
 " Map <tab> and <shift-tab> to cycle between tabs
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:tabnext<CR>
