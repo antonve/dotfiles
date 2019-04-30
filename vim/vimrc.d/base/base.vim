@@ -188,3 +188,6 @@ set spelllang=en_us
 
 " Don’t show the intro message when starting Vim
 set shortmess=atI
+
+" Switch between implementation and test
+nmap <Leader>a :A<CR>
