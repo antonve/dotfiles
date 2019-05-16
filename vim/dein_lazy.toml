@@ -51,6 +51,12 @@ on_ft = ['sh']
 
 #  Navigation
 #-----------------------------------------------
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+merged = 0
+
 [[plugins]] # fzf ❤️ vim, A command-line fuzzy finder
 repo  = 'junegunn/fzf.vim'
+depends = ['fzf']
 on_if = 1

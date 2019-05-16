@@ -13,9 +13,6 @@ let g:fzf_colors =
   \ "spinner": ["fg", "IncSearch"],
   \ "header":  ["fg", "WildMenu"] }
 
-" Add fzf installed with homebrew to runtime path
-set rtp+=/usr/local/opt/fzf
-
 " Replace the default dictionary completion with fzf-based fuzzy completion
 inoremap <expr> <c-x><c-k> fzf#complete('cat /usr/share/dict/words')
 
