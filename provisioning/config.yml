@@ -35,6 +35,7 @@ homebrew:
     - ripgrep
     - screen
     - shellcheck
+    - terraform
     - tmux
     - tree
     - wget
