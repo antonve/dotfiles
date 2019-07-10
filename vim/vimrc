@@ -117,6 +117,9 @@ endif
 if dein#tap('vim-go')
   call s:load_file('plugin/go')
 endif
+if dein#tap('vim-terraform')
+  call s:load_file('plugin/terraform')
+endif
 " if dein#tap('vim-textobj-multiblock')
 "   call s:load_file('plugin/vim-textobj-multiblock')
 " endif
