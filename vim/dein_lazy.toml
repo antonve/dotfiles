@@ -16,8 +16,7 @@ on_ft = ['go']
 
 [[plugins]] # basic vim/terraform integration
 repo = 'hashivim/vim-terraform'
-on_ft = ['hcl']
-
+on_ft = ['terraform']
 
 #  Completion
 #-----------------------------------------------
