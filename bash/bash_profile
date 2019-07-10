@@ -2,7 +2,7 @@ config_paths=(
   ~/bashrc.d/languages/{golang,python}.bash
   ~/bashrc.d/base/{aliases,autocomplete,exports}.bash
   ~/bashrc.d/envs/direnv.bash
-  ~/bashrc.d/tools/fzf.bash
+  ~/bashrc.d/tools/{fzf,google-cloud-sdk}.bash
 )
 
 for configs in "${config_paths[@]}"; do
