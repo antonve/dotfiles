@@ -14,6 +14,10 @@ on_if = 1
 repo  = 'fatih/vim-go'
 on_ft = ['go']
 
+[[plugins]] # basic vim/terraform integration
+repo = 'hashivim/vim-terraform'
+on_ft = ['hcl']
+
 
 #  Completion
 #-----------------------------------------------
