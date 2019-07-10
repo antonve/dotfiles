@@ -18,3 +18,9 @@ $ git clone git@github.com:antonve/dotfiles.git ~/dotfiles
 $ cd ~/dotfiles
 $ ./install
 ```
+
+## Filter what to provision
+```sh
+# Example which only runs homebrew
+$ ./install --tag homebrew
+```
