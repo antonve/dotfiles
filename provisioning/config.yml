@@ -2,6 +2,7 @@ homebrew:
   applications:
     - 1password
     - alfred
+    - background-music
     - discord
     - docker
     - firefox
