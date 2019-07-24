@@ -7,6 +7,7 @@ homebrew:
     - docker
     - firefox
     - gitify
+    - gitup
     - google-chrome
     - google-cloud-sdk
     - insomnia
