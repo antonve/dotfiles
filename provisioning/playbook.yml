@@ -21,6 +21,9 @@
     - role: homebrew
       tags: ['install', 'homebrew']
 
+    - role: npm
+      tags: ['install', 'npm']
+
     #  programming languages
     #-----------------------------------------------
     - role: golang

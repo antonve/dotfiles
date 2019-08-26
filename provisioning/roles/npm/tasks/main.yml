@@ -1,0 +1,5 @@
+- name: install npm packages
+  npm:
+    name: "{{ npm.global | join(' ') }}"
+    global: yes
+    state: present
