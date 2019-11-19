@@ -13,6 +13,7 @@ homebrew:
     - insomnia
     - karabiner-elements
     - keybase
+    - mitmproxy
     - postgres
     - quicklook-json
     - slack
