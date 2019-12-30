@@ -42,6 +42,7 @@ homebrew:
     - terraform
     - tmux
     - tree
+    - watchman
     - wget
     - yarn
 
