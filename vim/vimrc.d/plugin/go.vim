@@ -1,6 +1,9 @@
 " Setup goimports
 let g:go_fmt_command = "goimports"
 
+" To prevent the results from go-test not showing up
+let g:go_list_type = "quickfix"
+
 " Bindings for running the current file
 autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <leader>t <Plug>(go-test)
