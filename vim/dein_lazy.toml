@@ -18,6 +18,10 @@ on_ft = ['go']
 repo = 'hashivim/vim-terraform'
 on_ft = ['terraform']
 
+[[plugins]] # syntax highlighting for Swift
+repo = 'keith/swift.vim'
+on_ft = 'swift'
+
 #  Completion
 #-----------------------------------------------
 [[plugins]] # syntax source for neocomplete/deoplete/ncm
