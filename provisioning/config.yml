@@ -12,6 +12,7 @@ homebrew:
     - google-chrome
     - google-cloud-sdk
     - insomnia
+    - iterm2
     - karabiner-elements
     - keybase
     - ngrok
