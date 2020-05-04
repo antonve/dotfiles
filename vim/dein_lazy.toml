@@ -67,3 +67,8 @@ merged = 0
 repo  = 'junegunn/fzf.vim'
 depends = ['fzf']
 on_if = 1
+
+#  Social
+#-----------------------------------------------
+[[plugins]]
+repo = 'wakatime/vim-wakatime'
