@@ -13,7 +13,6 @@ homebrew:
     - insomnia
     - karabiner-elements
     - keybase
-    - mitmproxy
     - ngrok
     - postgres
     - quicklook-json
@@ -33,6 +32,7 @@ homebrew:
     - grc
     - imagemagick
     - jq
+    - mitmproxy
     - node
     - pgweb
     - rbenv
