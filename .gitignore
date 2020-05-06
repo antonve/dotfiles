@@ -6,3 +6,5 @@ provisioning/playbook.retry
 provisioning/secrets.yml
 
 !.gitkeep
+
+karabiner/automatic_backups/*
