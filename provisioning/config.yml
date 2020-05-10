@@ -4,6 +4,7 @@ homebrew:
     - alfred
     - anki
     - background-music
+    - contexts
     - discord
     - docker
     - firefox
