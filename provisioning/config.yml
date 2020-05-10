@@ -28,6 +28,7 @@ homebrew:
 
   packages:
     - ack
+    - carthage
     - coreutils
     - direnv
     - docker
