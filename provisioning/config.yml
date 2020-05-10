@@ -16,6 +16,7 @@ homebrew:
     - iterm2
     - karabiner-elements
     - keybase
+    - moom
     - ngrok
     - postgres
     - quicklook-json
