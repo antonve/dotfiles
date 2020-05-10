@@ -20,6 +20,7 @@ homebrew:
     - ngrok
     - postgres
     - quicklook-json
+    - sketch
     - slack
     - spotify
     - transmission
