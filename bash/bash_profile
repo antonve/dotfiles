@@ -11,3 +11,6 @@ for configs in "${config_paths[@]}"; do
   done;
 done;
 unset file configs config_paths;
+
+# temporarily silence zsh warnings because we haven't migrated to it yet
+export BASH_SILENCE_DEPRECATION_WARNING=1
