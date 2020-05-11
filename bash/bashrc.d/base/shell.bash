@@ -48,4 +48,4 @@ function parse_git_dirty {
   fi
 }
 
-PS1="\[\e[32m\]\n$(parse_git_branch)\[\e[m\] \w\n[\A] \$ "
+PS1="\[\e[32m\]\n\$(parse_git_branch)\[\e[m\] \w\n[\A] \$ "
