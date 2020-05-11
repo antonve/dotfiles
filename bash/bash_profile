@@ -1,6 +1,6 @@
 config_paths=(
   ~/bashrc.d/languages/{golang,python,ruby}.bash
-  ~/bashrc.d/base/{aliases,autocomplete,exports}.bash
+  ~/bashrc.d/base/{aliases,autocomplete,exports,shell}.bash
   ~/bashrc.d/envs/direnv.bash
   ~/bashrc.d/tools/{fzf,google-cloud-sdk}.bash
 )
@@ -11,6 +11,3 @@ for configs in "${config_paths[@]}"; do
   done;
 done;
 unset file configs config_paths;
-
-# temporarily silence zsh warnings because we haven't migrated to it yet
-export BASH_SILENCE_DEPRECATION_WARNING=1
