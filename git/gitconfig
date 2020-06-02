@@ -6,6 +6,10 @@
   co = checkout
   recent = !git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)'|column -ts'|'
 
+  # Workflow to temporary ignore files from the working tree
+  ignore = update-index --skip-worktree
+  unignore = update-index --no-skip-worktree
+
   # View abbreviated SHA, description, and history graph of the latest 20 commits
   l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
