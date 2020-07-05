@@ -28,3 +28,6 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
+
+# Add sbin to path
+export PATH="/usr/local/sbin:$PATH";
