@@ -35,6 +35,7 @@ homebrew:
     - docker
     - envchain
     - fzf
+    - github/gh/gh
     - go
     - grc
     - imagemagick
