@@ -8,9 +8,9 @@ set completeopt-=preview
 set shortmess+=c
 
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_yarp = 1
-let g:deoplete#enable_smart_case = 1
-let g:deoplete#auto_complete_delay = 0
+call deoplete#custom#option('yarp', v:true)
+call deoplete#custom#option('smart_case', v:true)
+call deoplete#custom#option('auto_complete_delay', 0)
 let g:deoplete#auto_complete_start_length = 1
 
 call deoplete#custom#source('buffer', 'min_pattern_length', 3)
