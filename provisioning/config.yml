@@ -1,4 +1,6 @@
 homebrew:
+  taps:
+    - homebrew/cask-fonts
   applications:
     - 1password
     - alfred
@@ -26,6 +28,7 @@ homebrew:
     - spotify
     - transmission
     - visual-studio-code
+    - font-fira-code
 
   packages:
     - ack

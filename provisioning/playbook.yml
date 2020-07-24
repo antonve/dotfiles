@@ -13,9 +13,6 @@
     - role: link
       tags: ['basic', 'link']
 
-    - role: fonts
-      tags: ['basic', 'fonts']
-
     #  install
     #-----------------------------------------------
     - role: homebrew

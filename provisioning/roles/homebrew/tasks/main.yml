@@ -5,6 +5,11 @@
   homebrew:
     update_homebrew: yes
 
+- name: add taps
+  homebrew_tap:
+    name: '{{ homebrew.taps }}'
+    state: present
+
 - name: install cask applications
   homebrew_cask:
     name:  '{{ homebrew.applications }}'
