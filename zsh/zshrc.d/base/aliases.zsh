@@ -17,7 +17,6 @@ alias go="grc go"
 alias h="history"
 alias j="jobs"
 alias make="grc make"
-alias reloadprofile="source ~/.bash_profile"
 alias tf="terraform"
 alias printip="ipconfig getifaddr en0"
 
@@ -154,14 +153,8 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
-# Reload the shell (i.e. invoke as a login shell)
-alias reload="exec $SHELL -l"
-
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
-
-# Project paths
-alias cdlogger="cd ~/xdev/go/src/github.com/antonve/logger-api/"
 
 # Fix my git typos
 alias got="git"
@@ -174,8 +167,14 @@ alias gca="git commit --amend"
 # Forcefully kill a process
 alias nuke="kill -9"
 
-# Tmux
-alias tmuxa="tmux attach -t"
+# tmux
+alias tm='tmux'
+alias tma='tmux attach'
+alias tma0='tmux attach -t 0'
+alias tma1='tmux attach -t 1'
+alias tma2='tmux attach -t 2'
+alias tml='tmux list-sessions'
+
 
 # Git email management
 alias gsetpersonal="git config user.email 974796+antonve@users.noreply.github.com && git config user.email"
