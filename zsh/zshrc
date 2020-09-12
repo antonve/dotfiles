@@ -1,0 +1,13 @@
+config_paths=(
+  ~/zshrc.d/languages/{golang,python,ruby}.zsh
+  ~/zshrc.d/base/{aliases,autocomplete,exports,functions,shell}.zsh
+  ~/zshrc.d/envs/direnv.zsh
+  ~/zshrc.d/tools/{fzf,google-cloud-sdk}.zsh
+)
+
+for configs in "${config_paths[@]}"; do
+  for file in $configs; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+  done;
+done;
+unset file configs config_paths;

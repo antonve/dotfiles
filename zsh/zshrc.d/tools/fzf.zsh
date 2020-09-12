@@ -6,11 +6,11 @@ fi
 
 # Auto-completion
 # ---------------
-[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.bash" 2> /dev/null
+[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
 
 # Key bindings
 # ------------
-source "/usr/local/opt/fzf/shell/key-bindings.bash"
+source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
 
 # fbr - checkout git branch (including remote branches), sorted by most recent commit, limit 30 last branches

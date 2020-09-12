@@ -61,11 +61,11 @@ homebrew:
 npm:
   global:
     - neovim
+    - pure-prompt
 
 link:
-  bash/bash_profile:         .bash_profile
-  bash/bashrc:               .bashrc
-  bash/bashrc.d:             bashrc.d
+  zsh/zshrc:                 .zshrc
+  zsh/zshrc.d:               zshrc.d
   git/gitconfig:             .gitconfig
   git/gitignore:             .gitignore
   git/hooks:                 gitconfig/hooks
