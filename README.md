@@ -14,7 +14,7 @@ Originally based on/inspired by the following dotfiles, then tweaked to setup my
 ## Installation
 
 ```sh
-$ git clone git@github.com:antonve/dotfiles.git ~/dotfiles
+$ git clone --recursive git@github.com:antonve/dotfiles.git ~/dotfiles
 $ cd ~/dotfiles
 $ ./install
 ```

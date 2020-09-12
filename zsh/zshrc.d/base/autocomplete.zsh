@@ -1,34 +1,33 @@
-# Case-insensitive globbing (used in pathname expansion)
-setopt NO_CASE_GLOB
+# HISTORY
+# ============================================
 
-# Automatically CD into directory even when forgetting to cd
-setopt AUTO_CD
-
-## HISTORY
 # Add timestamps to the history
-setopt EXTENDED_HISTORY
+setopt extended_history
 
 # Don't overwrite, but append to the history file
-setopt APPEND_HISTORY
+setopt append_history
 
 # Share history between different sessions
-setopt SHARE_HISTORY
+setopt share_history
 
 # Expire duplicates first
-setopt HIST_EXPIRE_DUPS_FIRST 
+setopt hist_expire_dups_first
 
 # Do not store duplications
-setopt HIST_IGNORE_DUPS
+setopt hist_ignore_dups
 
 # Ignore duplicates when searching
-setopt HIST_FIND_NO_DUPS
+setopt hist_find_no_dups
 
 # Removes blank lines from history
-setopt HIST_REDUCE_BLANKS
+setopt hist_reduce_blanks
+
+# AUTO COMPLETE
+# ============================================
 
 # Autocorrect typos
-setopt CORRECT
-setopt CORRECT_ALL
+setopt correct
+setopt correct_all
 
 # Turn on auto completion
 autoload -Uz compinit && compinit
@@ -38,3 +37,16 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}
 
 # Use vim key bindings
 bindkey -v
+
+# Autocomplete in brackets
+setopt auto_param_keys
+
+# Expand ranges
+setopt brace_ccl
+
+# Case-insensitive globbing (used in pathname expansion)
+setopt no_case_glob
+
+# If the argument to a cd command (or an implied cd with the AUTO_CD option set) is not a directory,
+# and does not begin with a slash, try to expand the expression as if it were preceded by a ‘~’
+setopt cdable_vars
