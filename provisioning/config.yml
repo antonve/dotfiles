@@ -61,6 +61,7 @@ homebrew:
 npm:
   global:
     - neovim
+    - pure-prompt
 
 link:
   bash/bash_profile:         .bash_profile
