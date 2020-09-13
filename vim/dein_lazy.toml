@@ -22,6 +22,18 @@ on_ft = ['terraform']
 repo = 'keith/swift.vim'
 on_ft = 'swift'
 
+[[plugins]] # Vastly improved Javascript indentation and syntax support
+repo  = 'pangloss/vim-javascript'
+on_ft = ['javascript']
+
+[[plugins]] # React JSX syntax pretty highlighting for vim
+repo = 'maxmellon/vim-jsx-pretty'
+on_ft = ['javascript', 'typescript']
+
+[[plugins]] # TypesSript syntax files for Vim
+repo  = 'herringtondarkholme/yats.vim'
+on_ft = ['typescript']
+
 #  Completion
 #-----------------------------------------------
 [[plugins]] # emmet for vim: HTML and CSS hi-speed coding
