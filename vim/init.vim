@@ -9,6 +9,8 @@ augroup vimrc
   autocmd!
 augroup END
 
+" let g:python3_host_prog = "/usr/local/Cellar/python@3.8/3.8.3/bin/python3"
+
 " g:env
 function! s:vimrc_environment()
   let l:env = {}

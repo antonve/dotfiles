@@ -60,7 +60,6 @@ homebrew:
 
 npm:
   global:
-    - neovim
     - pure-prompt
 
 link:
@@ -82,6 +81,7 @@ link:
   vim/gvimrc:                .gvimrc
   vim/vimrc:                 .vimrc
   vim:                       .vim
+  vim:                       .config/nvim
   wget:                      .wgetrc
 
 golang:
