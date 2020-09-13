@@ -98,14 +98,14 @@ call s:load_file('custom/text_objects')
 if dein#tap('dein.vim')
   call s:load_file('plugin/dein')
 endif
+if dein#tap('coc.nvim')
+  call s:load_file('plugin/coc')
+endif
 if dein#tap('fzf.vim')
   call s:load_file('plugin/fzf')
 endif
 if dein#tap('nerdcommenter')
   call s:load_file('plugin/nerdcommenter')
-endif
-if dein#tap('deoplete.nvim')
-  call s:load_file('plugin/deoplete')
 endif
 if dein#tap('surround.vim')
   call s:load_file('plugin/surround')

@@ -17,8 +17,10 @@ repo = 'easymotion/vim-easymotion'
 
 #  Auto-completion
 #-----------------------------------------------
-[[plugins]] # dark powered asynchronous completion framework for neovim/vim8
-repo    = 'Shougo/deoplete.nvim'
+[[plugins]] # Intellisense engine for Vim8 & Neovim, full language server protocol support as VSCode
+repo   = 'neoclide/coc.nvim'
+rev    = 'release'
+merged = 0
 
 
 #  Utils
