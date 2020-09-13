@@ -11,3 +11,4 @@ for configs in "${config_paths[@]}"; do
   done;
 done;
 unset file configs config_paths;
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

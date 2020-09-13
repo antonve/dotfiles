@@ -1,43 +1,32 @@
 - name: install dein.vim
   git:
-    repo:   https://github.com/Shougo/dein.vim
-    dest:   '{{ dotfiles_path }}/vim/dein/repos/github.com/Shougo/dein.vim'
+    repo: https://github.com/Shougo/dein.vim
+    dest: "{{ dotfiles_path }}/vim/dein/repos/github.com/Shougo/dein.vim"
     update: False
 
 - name: install python3
   homebrew:
-    name:  python3
+    name: python3
     state: present
 
-- name: install neovim python library
+- name: install python libraries
   pip:
     executable: pip3
-    name:       neovim
-    state:      latest
-  become: yes
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - neovim
+    - vim-vint
+    - pynvim
 
-- name: install vim-vint
-  pip:
-    executable: pip3
-    name:       vim-vint
-    state:      latest
-  become: yes
-
-- name: install macvim
+- name: install neovim
   homebrew:
-    name:            macvim
-    state:           present
-
-- name: link app
-  file:
-    src:   /usr/local/opt/macvim/MacVim.app
-    dest:  /Applications/MacVim.app
-    state: link
-    force: yes
+    name: neovim
+    state: present
 
 - name: link vim binary
   file:
-    src:   /usr/local/opt/macvim/MacVim.app/Contents/bin/vim
-    dest:  /usr/local/bin/vim
+    src: /usr/local/bin/nvim
+    dest: /usr/local/bin/vim
     state: link
     force: yes
