@@ -84,6 +84,12 @@ link:
   vim:                       .config/nvim
   wget:                      .wgetrc
 
+anyenv:
+  dir:         '{{ home_path }}/.anyenv'
+  plugins_dir: '{{ home_path }}/.anyenv/plugins'
+  envs_dir:    '{{ home_path }}/.anyenv/envs'
+  libexec_dir: '{{ home_path }}/.anyenv/libexec'
+
 golang:
   packages:
     # dev tools
