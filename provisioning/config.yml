@@ -56,11 +56,6 @@ homebrew:
     - tree
     - watchman
     - wget
-    - yarn
-
-npm:
-  global:
-    - pure-prompt
 
 link:
   zsh/zshrc:                 .zshrc
@@ -97,3 +92,10 @@ golang:
     - github.com/nsf/gocode              # An autocompletion daemon for the Go programming language
     - github.com/rogpeppe/godef          # find symbol information in Go source
     - github.com/izumin5210/gex/cmd/gex  # Dev tool dependency manager
+
+nodejs:
+  default_packages_path: '{{ dotfiles_path }}/config/nodenv/default-packages'
+  versions:
+    - '12.18.3'
+  plugins:
+    - nodenv/nodenv-default-packages

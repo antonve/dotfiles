@@ -25,6 +25,8 @@
     #-----------------------------------------------
     - role: anyenv
       tags: ['lang', 'lang.anyenv']
+    - role: nodejs
+      tags: ['lang', 'lang.anyenv', 'lang.anyenv.nodejs']
     - role: golang
       tags: ['lang', 'golang']
 
