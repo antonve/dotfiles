@@ -58,7 +58,7 @@ nnoremap <silent> [fzf]h :<C-u>History<CR>
 nnoremap <silent> [fzf]b :<C-u>Buffers<CR>
 nnoremap <silent> [fzf]l :<C-u>BLines<CR>
 nnoremap <silent> [fzf]t :<C-u>Tags<CR>
-nnoremap <silent> [fzf]a :<C-u>Ag<CR>
+nnoremap <silent> [fzf]r :<C-u>Rg<CR>
 nnoremap <silent> [fzf]g :<C-u>GGrep<CR>
 
 " Command for git grep
