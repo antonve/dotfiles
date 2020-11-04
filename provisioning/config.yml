@@ -9,6 +9,7 @@ homebrew:
     - contexts
     - discord
     - docker
+    - enjoyable
     - firefox
     - gitify
     - gitup
