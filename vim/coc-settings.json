@@ -1,6 +1,8 @@
 {
   "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnSaveFiletypes": ["typescript", "javascript", "typescriptreact"],
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+  "coc.preferences.messageLevel": "error",
 
   "languageserver": {
     "gopls": {
