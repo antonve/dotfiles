@@ -208,3 +208,6 @@ endfunction
 
 " Easily edit a new file in the current directory
 nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
+
+" Search and replace the current word
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
