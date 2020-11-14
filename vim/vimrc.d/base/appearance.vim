@@ -27,7 +27,7 @@ set showtabline=2
 set showmatch
 
 " Show line numbers
-set number
+set number relativenumber
 
 " Highlight the current line, be careful because this will slow down vim
 set cursorline
