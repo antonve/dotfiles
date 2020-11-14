@@ -40,8 +40,6 @@ if has('gui_running')
 endif
 
 " Shortcut
-" @TODO: figure this one out properly
-nmap <C-s> <C-w>
 
 " edit configurations
 command! Vimrc edit $MYVIMRC
@@ -80,8 +78,7 @@ vnoremap x "_x
 inoremap <C-u> <C-g>u<C-u>
 inoremap <C-w> <C-g>u<C-w>
 
-" Why are you left out??
-" @TODO: what's this?
+" Yank til end of line
 nnoremap Y y$
 
 " Keep the cursor in place while joining lines
@@ -93,12 +90,6 @@ nnoremap <silent> K ylpr<Enter>
 " Reselect visual block after indent/outdent
 vnoremap < <gv
 vnoremap > >gv
-
-" Indent/outdent
-inoremap <C-s><C-h> <C-d>
-inoremap <C-s><C-l> <C-t>
-inoremap <C-s>h <C-d>
-inoremap <C-s>l <C-t>
 
 " Easy key
 nnoremap <Space>h g^ " Start of line
