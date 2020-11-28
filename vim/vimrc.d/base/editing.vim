@@ -211,3 +211,6 @@ nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
 
 " Search and replace the current word
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+
+" Auto complete html tags
+inoremap <buffer> <C-s> <esc>yiwi<lt><esc>ea></><esc>hpF>a
