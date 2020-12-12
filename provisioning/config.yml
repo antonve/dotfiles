@@ -1,6 +1,7 @@
 homebrew:
   taps:
     - homebrew/cask-fonts
+    - jakehilborn/jakehilborn
   applications:
     - 1password
     - alfred
@@ -36,6 +37,7 @@ homebrew:
     - carthage
     - coreutils
     - direnv
+    - displayplacer
     - docker
     - envchain
     - fzf
