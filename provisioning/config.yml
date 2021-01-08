@@ -45,6 +45,7 @@ homebrew:
     - github/gh/gh
     - go
     - grc
+    - grpcurl
     - imagemagick
     - jq
     - kubernetes-cli
