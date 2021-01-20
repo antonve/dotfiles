@@ -32,6 +32,8 @@
       tags: ['lang', 'lang.anyenv', 'lang.anyenv.nodejs']
     - role: golang
       tags: ['lang', 'golang']
+    - role: java
+      tags: ['lang', 'java']
 
     #  app
     #-----------------------------------------------

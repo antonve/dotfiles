@@ -34,6 +34,14 @@ on_ft = ['javascript', 'typescript']
 repo  = 'herringtondarkholme/yats.vim'
 on_ft = ['typescript', 'typescriptreact']
 
+[[plugins]] # Vim syntax highlighting for Google's Protocol Buffers
+repo  = 'uarun/vim-protobuf'
+on_ft = ['proto']
+
+[[plugins]] # Kotlin plugin for Vim. Featuring: syntax highlighting, basic indentation, Syntastic support
+repo = 'udalov/kotlin-vim'
+on_ft = ['kotlin']
+
 #  Completion
 #-----------------------------------------------
 [[plugins]] # emmet for vim: HTML and CSS hi-speed coding

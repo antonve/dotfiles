@@ -14,7 +14,9 @@
   homebrew_cask:
     name:  '{{ homebrew.applications }}'
     state: present
+    accept_external_apps: yes
   when: homebrew.applications
+  ignore_errors: yes
 
 - name: install homebrew packages
   homebrew:
