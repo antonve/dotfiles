@@ -214,3 +214,6 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 " Auto complete html tags
 inoremap <buffer> <C-s> <esc>yiwi<lt><esc>ea></><esc>hpF>a
+
+" Search current word in project
+nnoremap <Leader>d :<C-u>Rg <C-r><C-w><CR>
