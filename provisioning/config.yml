@@ -46,6 +46,7 @@ homebrew:
     - grc
     - imagemagick
     - jq
+    - kubernetes-cli
     - mitmproxy
     - node
     - pgweb
