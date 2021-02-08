@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+set -eu
+set -o pipefail
+
+get_layout() {
+  local thinkvision_left_id='6993C9D6-50D5-6792-554B-E52A11938F8A' # Lenovo ThinkVision p27u-10
+  local thinkvision_left_config='res:1920x1080 hz:60 color_depth:8 scaling:on origin:(0,0) degree:0'
+
+  local thinkvision_right_id='3AF867A3-E41A-7108-F970-9EBFB8148C5A' # Lenovo ThinkVision p27u-10
+  local thinkvision_right_config='res:1080x1920 hz:60 color_depth:8 scaling:on origin:(1920,-624) degree:270'
+
+  case "$1" in
+    "${thinkvision_left_id}")
+      echo "$thinkvision_left_config"
+      ;;
+    "${thinkvision_right_id}")
+      echo "$thinkvision_right_config"
+      ;;
+  esac
+}
+
+layout() {
+  displayplacer "id:$1 $(get_layout "$1")" &
+}
+
+displayplacer list \
+  | sed -n -E 's/^Persistent screen id: ([0-9A-F-]+)/\1/p' \
+  | while IFS= read -r id; do layout "$id"; done
