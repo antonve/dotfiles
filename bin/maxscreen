@@ -24,6 +24,9 @@ layout() {
   displayplacer "id:$1 $(get_layout "$1")" &
 }
 
+# the left screen needs to be set first or the main screen will be wrong,
+# so we reverse sort the IDs
 displayplacer list \
   | sed -n -E 's/^Persistent screen id: ([0-9A-F-]+)/\1/p' \
+  | sort -r \
   | while IFS= read -r id; do layout "$id"; done
