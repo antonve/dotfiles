@@ -62,6 +62,8 @@ homebrew:
     - wget
 
 link:
+  shell/profile:             .profile
+  bash/profile:              .bash_profile
   zsh/zshrc:                 .zshrc
   zsh/zshrc.d:               zshrc.d
   git/gitconfig:             .gitconfig
@@ -79,7 +81,6 @@ link:
   tmux/tmux.conf:            .tmux.conf
   vim/gvimrc:                .gvimrc
   vim/vimrc:                 .vimrc
-  vim:                       .vim
   vim:                       .config/nvim
   wget:                      .wgetrc
 
