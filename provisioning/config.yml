@@ -6,6 +6,7 @@ homebrew:
     - 1password
     - alfred
     - anki
+    - antonve/tools/screen-manager
     - background-music
     - contexts
     - discord
