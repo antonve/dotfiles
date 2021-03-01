@@ -11,10 +11,10 @@
     tap:   adoptopenjdk/openjdk
     state: present
 
-# - name: install old versions
-  # homebrew_cask:
-  #   name: adoptopenjdk11
-  #   state: present
+- name: install old versions
+  homebrew_cask:
+    name: adoptopenjdk8
+    state: present
 
 - name: check jenv
   command: |
