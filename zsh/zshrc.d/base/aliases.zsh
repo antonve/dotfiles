@@ -19,6 +19,7 @@ alias j="jobs"
 alias make="grc make"
 alias tf="terraform"
 alias printip="ipconfig getifaddr en0"
+alias k="kubectl"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
