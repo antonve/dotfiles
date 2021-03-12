@@ -28,6 +28,11 @@ merged = 0
 [[plugins]] # a git wrapper so awesome, it should be illegal
 repo = 'tpope/vim-fugitive'
 
+[[plugins]] # Make terminal vim and tmux work better together.
+repo = 'tmux-plugins/vim-tmux-focus-events'
+
+[[plugins]] # seamless integration for vim and tmux's clipboard
+repo = 'roxma/vim-tmux-clipboard'
 
 #  Appearance
 #-----------------------------------------------
