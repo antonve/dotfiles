@@ -217,3 +217,7 @@ inoremap <buffer> <C-s> <esc>yiwi<lt><esc>ea></><esc>hpF>a
 
 " Search current word in project
 nnoremap <Leader>d :<C-u>Rg <C-r><C-w><CR>
+
+" Kotlin
+" Four spaces tab width
+autocmd Filetype kotlin setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
