@@ -1,6 +1,7 @@
 homebrew:
   taps:
     - homebrew/cask-fonts
+    - hotchemi/tap
     - jakehilborn/jakehilborn
   applications:
     - 1password
@@ -26,6 +27,7 @@ homebrew:
     - ngrok
     - postgres
     - quicklook-json
+    - scre
     - sketch
     - slack
     - spotify
