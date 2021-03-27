@@ -35,6 +35,7 @@ homebrew:
 
   packages:
     - ack
+    - bazel
     - carthage
     - coreutils
     - direnv
