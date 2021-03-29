@@ -26,8 +26,8 @@ setopt hist_reduce_blanks
 # ============================================
 
 # Autocorrect typos
+setopt nocorrectall
 setopt correct
-setopt correct_all
 
 # Turn on auto completion
 autoload -Uz compinit && compinit
