@@ -119,6 +119,9 @@ endif
 if dein#tap('vim-go')
   call s:load_file('plugin/go')
 endif
+if dein#tap('vim-javascript')
+  call s:load_file('plugin/javascript')
+endif
 if dein#tap('vim-terraform')
   call s:load_file('plugin/terraform')
 endif
