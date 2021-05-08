@@ -40,6 +40,7 @@ homebrew:
     - coreutils
     - direnv
     - displayplacer
+    - dive
     - docker
     - envchain
     - fzf
