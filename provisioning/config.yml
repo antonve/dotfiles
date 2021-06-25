@@ -62,7 +62,6 @@ homebrew:
     - ripgrep
     - screen
     - shellcheck
-    - terraform
     - tfenv
     - tmux
     - tree
