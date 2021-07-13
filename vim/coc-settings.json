@@ -1,6 +1,6 @@
 {
   "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnSaveFiletypes": ["typescript", "javascript", "typescriptreact"],
+  "coc.preferences.formatOnSaveFiletypes": ["typescript", "javascript", "typescriptreact", "javascriptreact"],
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
   "coc.preferences.messageLevel": "error",
 

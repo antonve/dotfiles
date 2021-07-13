@@ -28,7 +28,7 @@ on_ft = ['javascript']
 
 [[plugins]] # React JSX syntax pretty highlighting for vim
 repo = 'maxmellon/vim-jsx-pretty'
-on_ft = ['javascript', 'typescript']
+on_ft = ['javascript', 'typescript', 'javascriptreact', 'typescriptreact']
 
 [[plugins]] # TypesSript syntax files for Vim
 repo  = 'herringtondarkholme/yats.vim'
