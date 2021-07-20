@@ -3,6 +3,7 @@ homebrew:
     - homebrew/cask-fonts
     - hotchemi/tap
     - jakehilborn/jakehilborn
+    - instrumenta/instrumenta
   applications:
     - 1password
     - alfred
@@ -54,6 +55,7 @@ homebrew:
     - imagemagick
     - jq
     - kubernetes-cli
+    - kubeval
     - mitmproxy
     - node
     - pgweb
