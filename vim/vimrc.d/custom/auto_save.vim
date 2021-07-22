@@ -1,4 +1,4 @@
-let g:auto_save = 1
+let g:auto_save = 0
 
 autocmd vimrc User AutoSavePre :
 autocmd vimrc User AutoSavePost :
