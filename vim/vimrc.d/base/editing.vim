@@ -221,3 +221,6 @@ nnoremap <Leader>d :<C-u>Rg <C-r><C-w><CR>
 " Kotlin
 " Four spaces tab width
 autocmd Filetype kotlin setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
+" Live preview search/replace
+set inccommand=nosplit
