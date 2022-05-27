@@ -49,6 +49,7 @@ homebrew:
     - envchain
     - fzf
     - github/gh/gh
+    - git-delta
     - go
     - gradle
     - grc

@@ -77,6 +77,8 @@
   # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
   precomposeunicode = false
 
+  pager = delta
+
 [color]
 
   # Use colors in Git commands that are capable of colored output when
@@ -112,6 +114,8 @@
   # Detect copies as well as renames
   renames = copies
 
+  colorMoved = default
+
 [diff "bin"]
 
   # Use `hexdump` to diff binary files
@@ -126,6 +130,8 @@
 
   # Include summaries of merged commits in newly created merge commit messages
   log = true
+
+  conflictstyle = diff3
 
 [push]
 
@@ -164,3 +170,16 @@
 [user]
   email = 974796+antonve@users.noreply.github.com
   name = Anton Van Eechaute
+
+[filter "lfs"]
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true  # use n and N to move between diff sections
+  light = false    # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
