@@ -38,6 +38,7 @@ homebrew:
 
   packages:
     - ack
+    - bat
     - bazel
     - carthage
     - coreutils
