@@ -26,7 +26,6 @@ homebrew:
     - keybase
     - moom
     - ngrok
-    - postgres
     - quicklook-json
     - scre
     - sketch
