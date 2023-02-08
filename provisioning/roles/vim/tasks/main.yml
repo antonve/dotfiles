@@ -26,7 +26,7 @@
 
 - name: link vim binary
   file:
-    src: /usr/local/bin/nvim
+    src: /opt/homebrew/bin/nvim
     dest: /usr/local/bin/vim
     state: link
     force: yes
