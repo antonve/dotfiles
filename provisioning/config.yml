@@ -60,6 +60,7 @@ homebrew:
     - mitmproxy
     - node
     - pgweb
+    - pnpm
     - rbenv
     - readline
     - ripgrep

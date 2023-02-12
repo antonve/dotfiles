@@ -22,6 +22,7 @@ alias printip="ipconfig getifaddr en0"
 alias k="kubectl"
 alias dc="docker-compose"
 alias vim="nvim"
+alias p="pnpm"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
