@@ -9,6 +9,8 @@ fpath=(
   $fpath
 )
 
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+
 # PROMPT
 # ============================================
 autoload -U promptinit; promptinit

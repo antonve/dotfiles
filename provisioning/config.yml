@@ -56,7 +56,6 @@ homebrew:
     - imagemagick
     - jq
     - kubernetes-cli
-    - kubeval
     - mitmproxy
     - node
     - pgweb
@@ -102,15 +101,10 @@ anyenv:
 
 golang:
   packages:
-    # dev tools
-    - golang.org/x/lint/golint           # Golint is a linter for Go source code
-    - github.com/nsf/gocode              # An autocompletion daemon for the Go programming language
-    - github.com/rogpeppe/godef          # find symbol information in Go source
-    - github.com/izumin5210/gex/cmd/gex  # Dev tool dependency manager
 
 nodejs:
   default_packages_path: '{{ dotfiles_path }}/config/nodenv/default-packages'
   versions:
-    - '12.18.3'
+    - '19.6.0'
   plugins:
     - nodenv/nodenv-default-packages
