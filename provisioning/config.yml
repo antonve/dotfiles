@@ -53,6 +53,7 @@ homebrew:
     - gradle
     - grc
     - grpcurl
+    - helm
     - imagemagick
     - jq
     - kubernetes-cli
@@ -65,6 +66,7 @@ homebrew:
     - screen
     - shellcheck
     - tfenv
+    - tilt
     - tmux
     - tree
     - watchman
