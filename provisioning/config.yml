@@ -1,38 +1,30 @@
 homebrew:
   taps:
-    - homebrew/cask-fonts
-    - hotchemi/tap
     - jakehilborn/jakehilborn
   applications:
-    - 1password
+    # - 1password
     - alfred
-    - anki
+    # - anki
     - antonve/tools/screen-manager
     - background-music
     - contexts
-    - discord
+    # - discord
     - docker
-    - enjoyable
+    # - enjoyable
     - firefox
     - gitify
-    - gitup
-    - google-chrome
+    # - google-chrome
     - google-cloud-sdk
     - imageoptim
     - insomnia
     - iterm2
     - karabiner-elements
-    - keybase
-    - moom
-    - ngrok
+    # - moom
     - postgres-unofficial
     - pure-prompt
     - quicklook-json
-    - scre
-    - sketch
-    - slack
+    # - slack
     - spotify
-    - transmission
     - visual-studio-code
     - font-fira-code
 
