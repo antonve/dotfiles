@@ -86,9 +86,6 @@ link:
   vim:                       .config/nvim
   wget:                      .wgetrc
 
-golang:
-  packages:
-
 nodejs:
   nvm_dir: '{{ home_path }}/.nvm'
   install_version: '--lts'

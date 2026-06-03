@@ -28,8 +28,6 @@
     #-----------------------------------------------
     - role: nodejs
       tags: ['lang', 'node']
-    - role: golang
-      tags: ['lang', 'golang']
     - role: java
       tags: ['lang', 'java']
 
