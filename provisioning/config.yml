@@ -72,8 +72,6 @@ link:
   git/gitignore:             .gitignore
   grc:                       .grc
   karabiner:                 .config/karabiner
-  mac/aliases:               .aliases
-  mac/exports:               .exports
   mac/hushlogin:             .hushlogin
   mac/inputrc:               .inputrc
   ruby/irbrc:                .irbrc
@@ -81,7 +79,6 @@ link:
   screen/screenrc:           .screenrc
   tmux/tmux.conf:            .tmux.conf
   vim/gvimrc:                .gvimrc
-  vim/vimrc:                 .vimrc
   vim:                       .config/nvim
   wget:                      .wgetrc
 
