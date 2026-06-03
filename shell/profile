@@ -23,6 +23,11 @@ export PATH="$DOTFILES_PATH/bin:$PATH";
 # Add sbin to path
 export PATH="/usr/local/sbin:$PATH";
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
+
 # App configuration
 # ------------------------------
 

@@ -1,0 +1,28 @@
+- set_fact:
+    nodejs: {}
+
+- name: install nvm
+  homebrew:
+    name: nvm
+    state: present
+
+- name: create nvm dir
+  file:
+    path: '{{ nodejs.nvm_dir }}'
+    state: directory
+
+- name: install latest nodejs lts
+  shell: |
+    set -e
+    export NVM_DIR={{ nodejs.nvm_dir | quote }}
+    if [ -s /opt/homebrew/opt/nvm/nvm.sh ]; then
+      . /opt/homebrew/opt/nvm/nvm.sh
+    else
+      . /usr/local/opt/nvm/nvm.sh
+    fi
+    nvm install {{ nodejs.install_version | quote }}
+    nvm alias default {{ nodejs.default_alias | quote }}
+    nvm use default
+    corepack enable
+  args:
+    executable: /bin/bash

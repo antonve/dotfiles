@@ -50,9 +50,7 @@ homebrew:
     - jq
     - kubernetes-cli
     - mitmproxy
-    - node
     - pgweb
-    - pnpm
     - rbenv
     - readline
     - ripgrep
@@ -90,3 +88,8 @@ link:
 
 golang:
   packages:
+
+nodejs:
+  nvm_dir: '{{ home_path }}/.nvm'
+  install_version: '--lts'
+  default_alias: 'lts/*'

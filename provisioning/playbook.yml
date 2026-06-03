@@ -26,6 +26,8 @@
 
     #  programming languages
     #-----------------------------------------------
+    - role: nodejs
+      tags: ['lang', 'node']
     - role: golang
       tags: ['lang', 'golang']
     - role: java
