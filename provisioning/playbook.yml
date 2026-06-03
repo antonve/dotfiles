@@ -26,10 +26,6 @@
 
     #  programming languages
     #-----------------------------------------------
-    - role: anyenv
-      tags: ['lang', 'lang.anyenv']
-    - role: nodejs
-      tags: ['lang', 'node', 'lang.anyenv.node']
     - role: golang
       tags: ['lang', 'golang']
     - role: java

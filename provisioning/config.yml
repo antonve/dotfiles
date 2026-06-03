@@ -88,18 +88,5 @@ link:
   vim:                       .config/nvim
   wget:                      .wgetrc
 
-anyenv:
-  dir:         '{{ home_path }}/.anyenv'
-  plugins_dir: '{{ home_path }}/.anyenv/plugins'
-  envs_dir:    '{{ home_path }}/.anyenv/envs'
-  libexec_dir: '{{ home_path }}/.anyenv/libexec'
-
 golang:
   packages:
-
-nodejs:
-  default_packages_path: '{{ dotfiles_path }}/config/nodenv/default-packages'
-  versions:
-    - '19.6.0'
-  plugins:
-    - nodenv/nodenv-default-packages

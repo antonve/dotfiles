@@ -14,9 +14,6 @@ export EDITOR='vim';
 # Dotfiles
 export DOTFILES_PATH="$HOME/dotfiles"
 
-# Anyenv
-export ANYENV_DIR=$HOME/.anyenv
-
 # Search path
 # ------------------------------
 
@@ -25,9 +22,6 @@ export PATH="$DOTFILES_PATH/bin:$PATH";
 
 # Add sbin to path
 export PATH="/usr/local/sbin:$PATH";
-
-# Anyenv
-export PATH=$ANYENV_DIR/bin:$PATH
 
 # App configuration
 # ------------------------------
@@ -56,11 +50,3 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
-
-# Anyenv
-# ------------------------------
-
-if [ -z "$SKIP_ANYENV_INIT" ] && [ -d "$HOME/.anyenv" ] && command -v 'anyenv' > /dev/null 2>&1; then
-  eval "$(anyenv init - --no-rehash)"
-  (anyenv rehash &) 2> /dev/null # Lazy rehashing
-fi
