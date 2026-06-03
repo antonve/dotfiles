@@ -23,3 +23,11 @@
   homebrew:
     name: neovim
     state: present
+
+- name: link vim binary
+  become: yes
+  file:
+    src: /opt/homebrew/bin/nvim
+    dest: /usr/local/bin/vim
+    state: link
+    force: yes

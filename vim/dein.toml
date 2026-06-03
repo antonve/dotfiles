@@ -36,5 +36,8 @@ repo = 'roxma/vim-tmux-clipboard'
 
 #  Appearance
 #-----------------------------------------------
-[[plugins]] # candle theme
-repo = 'creasty/candle.vim'
+# [[plugins]] # candle theme
+# repo = 'creasty/candle.vim'
+#
+[[plugins]] # kanagawa theme
+repo = 'rebelot/kanagawa.nvim'

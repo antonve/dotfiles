@@ -3,7 +3,6 @@ homebrew:
     - homebrew/cask-fonts
     - hotchemi/tap
     - jakehilborn/jakehilborn
-    - instrumenta/instrumenta
   applications:
     - 1password
     - alfred
@@ -26,6 +25,8 @@ homebrew:
     - keybase
     - moom
     - ngrok
+    - postgres-unofficial
+    - pure-prompt
     - quicklook-json
     - scre
     - sketch
@@ -50,7 +51,6 @@ homebrew:
     - github/gh/gh
     - git-delta
     - go
-    - gradle
     - grc
     - grpcurl
     - helm

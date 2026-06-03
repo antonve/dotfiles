@@ -17,6 +17,11 @@ if dein#tap('candle.vim')
   colorscheme candle
 endif
 
+if dein#tap('kanagawa.nvim')
+  colorscheme kanagawa
+endif
+
+
 " Always show statusline
 set laststatus=2
 
