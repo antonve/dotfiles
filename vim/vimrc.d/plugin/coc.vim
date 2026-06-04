@@ -14,7 +14,6 @@ let g:coc_global_extensions = [
   \ 'coc-python',
   \ 'coc-solargraph',
   \ 'coc-syntax',
-  \ 'coc-tabnine',
   \ 'coc-tslint-plugin',
   \ 'coc-tsserver',
   \ 'coc-vimlsp',
