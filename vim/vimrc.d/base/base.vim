@@ -10,11 +10,14 @@ let g:loaded_vimball            = 1
 let g:loaded_vimballPlugin      = 1
 let g:loaded_getscript          = 1
 let g:loaded_getscriptPlugin    = 1
-let g:loaded_netrw              = 1
-let g:loaded_netrwPlugin        = 1
-let g:loaded_netrwSettings      = 1
-let g:loaded_netrwFileHandlers  = 1
 let g:loaded_logipat            = 1
+
+" Let netrw handle directory arguments before Neovim tries to read them as files.
+autocmd vimrc BufReadCmd *
+  \ if isdirectory(expand('<amatch>')) |
+    \ runtime plugin/netrwPlugin.vim |
+    \ call netrw#LocalBrowseCheck(expand('<amatch>')) |
+  \ endif
 
 " Configure runtime features
 let g:omni_sql_no_default_maps = 1
@@ -68,7 +71,9 @@ set visualbell t_vb=
 set noerrorbells
 
 " Set the initial directory of the file browser to that of the related buffer
-set browsedir=buffer
+if has('browse')
+  set browsedir=buffer
+endif
 
 " Move cursor over lines
 set whichwrap=b,s,h,l,<,>,[,]
@@ -120,7 +125,9 @@ endif
 set nrformats=alpha,hex
 
 " Disable IME
-set imdisable
+if has('multi_byte_ime') || has('xim')
+  set imdisable
+endif
 
 " Prevent hidden buffers
 set nohidden
