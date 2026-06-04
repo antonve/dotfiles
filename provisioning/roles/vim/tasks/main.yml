@@ -6,7 +6,9 @@
 
 - name: install python3
   homebrew:
-    name: python3
+    name:
+      - python3
+      - python-packaging
     state: present
 
 - name: install python libraries

@@ -15,11 +15,11 @@
     name:  '{{ homebrew.applications }}'
     state: present
     accept_external_apps: yes
-  when: homebrew.applications
+  when: homebrew.applications | default([]) | length > 0
   ignore_errors: yes
 
 - name: install homebrew packages
   homebrew:
     name:  '{{ homebrew.packages }}'
     state: present
-  when: homebrew.packages
+  when: homebrew.packages | default([]) | length > 0

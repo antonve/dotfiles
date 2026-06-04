@@ -1,5 +1,7 @@
 # Load google cloud sdk config for zsh
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+_google_cloud_sdk_dir="${HOMEBREW_PREFIX:-$(brew --prefix)}/share/google-cloud-sdk"
+[[ -r "$_google_cloud_sdk_dir/path.zsh.inc" ]] && source "$_google_cloud_sdk_dir/path.zsh.inc"
 
 # The next line enables auto completion for gcloud
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+[[ -r "$_google_cloud_sdk_dir/completion.zsh.inc" ]] && source "$_google_cloud_sdk_dir/completion.zsh.inc"
+unset _google_cloud_sdk_dir

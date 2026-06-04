@@ -5,11 +5,12 @@ homebrew:
     # - 1password
     - alfred
     # - anki
-    - antonve/tools/screen-manager
-    - background-music
+    # Disabled until antonve/tools/screen-manager removes the deprecated appcast stanza.
+    # - antonve/tools/screen-manager
+    # - background-music
     - contexts
     # - discord
-    - docker
+    # - docker
     # - enjoyable
     - firefox
     - gitify
@@ -21,8 +22,7 @@ homebrew:
     - karabiner-elements
     # - moom
     - postgres-unofficial
-    - pure-prompt
-    - quicklook-json
+    # - quicklook-json
     # - slack
     - spotify
     - visual-studio-code
@@ -40,7 +40,7 @@ homebrew:
     - docker
     - envchain
     - fzf
-    - github/gh/gh
+    - homebrew/core/gh
     - git-delta
     - go
     - grc
@@ -51,6 +51,7 @@ homebrew:
     - kubernetes-cli
     - mitmproxy
     - pgweb
+    - pure
     - rbenv
     - readline
     - ripgrep
@@ -70,6 +71,8 @@ link:
   zsh/zshrc.d:               zshrc.d
   git/gitconfig:             .gitconfig
   git/gitignore:             .gitignore
+  ghostty:                   .config/ghostty
+  ghostty/config.ghostty:    "Library/Application Support/com.mitchellh.ghostty/config.ghostty"
   grc:                       .grc
   karabiner:                 .config/karabiner
   mac/hushlogin:             .hushlogin

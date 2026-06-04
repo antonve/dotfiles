@@ -14,7 +14,11 @@ fpath+=("$(brew --prefix)/share/zsh/site-functions")
 # PROMPT
 # ============================================
 autoload -U promptinit; promptinit
-prompt pure
+if [[ -n ${prompt_themes[(r)pure]} ]]; then
+  prompt pure
+else
+  prompt default
+fi
 
 # Show git in prompt
 zstyle :prompt:pure:git:stash show yes
