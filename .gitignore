@@ -4,6 +4,7 @@ vim/dein/*
 
 provisioning/playbook.retry
 provisioning/secrets.yml
+git/gitconfig.work
 
 !.gitkeep
 
