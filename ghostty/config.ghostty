@@ -58,4 +58,8 @@ theme = Kanagawa Wave
 
 working-directory = home
 window-inherit-working-directory = false
-macos-icon = xray
+
+macos-icon = custom-style
+macos-icon-frame = plastic
+macos-icon-ghost-color = #ffffff
+macos-icon-screen-color = #000000,#ffffff
