@@ -43,6 +43,15 @@ openx() {
   fi
 }
 
+# AWS
+# ============================================
+
+# Interactively select an AWS profile for the current session
+awsp() {
+  local profile
+  profile=$(aws configure list-profiles | fzf) && export AWS_PROFILE="$profile"
+}
+
 # Tmux
 # ============================================
 
