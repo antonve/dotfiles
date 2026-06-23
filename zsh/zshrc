@@ -16,3 +16,5 @@ for configs in "${config_paths[@]}"; do
 done;
 unset file configs config_paths;
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+[ -f ~/dotfiles/zsh/zshrc.work ] && source ~/dotfiles/zsh/zshrc.work
