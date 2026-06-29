@@ -12,13 +12,6 @@ let g:loaded_getscript          = 1
 let g:loaded_getscriptPlugin    = 1
 let g:loaded_logipat            = 1
 
-" Let netrw handle directory arguments before Neovim tries to read them as files.
-autocmd vimrc BufReadCmd *
-  \ if isdirectory(expand('<amatch>')) |
-    \ runtime plugin/netrwPlugin.vim |
-    \ call netrw#LocalBrowseCheck(expand('<amatch>')) |
-  \ endif
-
 " Configure runtime features
 let g:omni_sql_no_default_maps = 1
 let g:tex_flavor = 'latex'
