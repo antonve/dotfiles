@@ -187,3 +187,10 @@
 
 [include]
   path = ~/dotfiles/git/gitconfig.work
+
+# Personal projects under ~/xdev/personal/ always use the public/anonymous
+# GitHub noreply email, overriding gitconfig.work above for that directory
+# tree specifically (conditional includes are order-sensitive: this must
+# stay after the unconditional work include to win for matching repos).
+[includeIf "gitdir:~/xdev/personal/**"]
+  path = ~/dotfiles/git/gitconfig.personal
