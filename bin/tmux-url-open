@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Fuzzy-pick a URL from a tmux pane (including scrollback) and open it.
+# Runs inside `tmux display-popup -E`, which provides a real tty for fzf.
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+pane="${1:-}"
+urls="$(tmux capture-pane -J -S -2000 -p ${pane:+-t "$pane"} \
+  | grep -oE 'https?://[^ "'"'"'<>)\]]+' \
+  | sed 's/[.,;:]*$//' \
+  | sort -u)"
+if [ -z "$urls" ]; then
+  printf 'no URLs found in this pane - press any key to close'
+  read -rsn1
+  exit 0
+fi
+url="$(printf '%s\n' "$urls" | fzf --no-multi --reverse --prompt='open url> ')" || exit 0
+[ -n "$url" ] && open "$url"
+exit 0
