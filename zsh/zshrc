@@ -18,3 +18,4 @@ unset file configs config_paths;
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [ -f ~/dotfiles/zsh/zshrc.work ] && source ~/dotfiles/zsh/zshrc.work
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
