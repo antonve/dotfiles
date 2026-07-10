@@ -63,3 +63,13 @@ macos-icon = custom-style
 macos-icon-frame = plastic
 macos-icon-ghost-color = #ffffff
 macos-icon-screen-color = #000000,#ffffff
+
+window-theme = ghostty
+shell-integration = zsh
+macos-titlebar-style = tabs
+#macos-non-native-fullscreen = true
+
+
+# Transparency
+background-opacity = 0.9
+background-blur-radius = 40

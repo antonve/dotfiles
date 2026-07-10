@@ -80,6 +80,7 @@ link:
   ruby/irbrc:                .irbrc
   ruby/pryrc:                .pryrc
   screen/screenrc:           .screenrc
+  herdr/config.toml:         .config/herdr/config.toml
   tmux/tmux.conf:            .tmux.conf
   vim/gvimrc:                .gvimrc
   vim:                       .config/nvim

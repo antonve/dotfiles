@@ -1,0 +1,27 @@
+[ui]
+agent_panel_sort = "priority"
+show_agent_labels_on_pane_borders = true
+
+[theme]
+name = "tokyo-night"
+auto_switch = false
+
+[keys]
+prefix = "ctrl+s"
+
+# Keep the tmux muscle memory from tmux/tmux.conf where herdr has equivalents.
+settings = "prefix+shift+s"
+reload_config = "prefix+r"
+new_tab = "prefix+t"
+previous_tab = "prefix+ctrl+b"
+next_tab = "prefix+ctrl+n"
+edit_scrollback = "ctrl+y"
+split_vertical = "prefix+s"
+split_horizontal = "prefix+v"
+focus_pane_left = "prefix+ctrl+h"
+focus_pane_down = "prefix+ctrl+j"
+focus_pane_up = "prefix+ctrl+k"
+focus_pane_right = "prefix+ctrl+l"
+close_pane = "prefix+d"
+zoom = "prefix+z"
+resize_mode = "prefix+shift+r"
