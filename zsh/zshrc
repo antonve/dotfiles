@@ -19,3 +19,18 @@ unset file configs config_paths;
 
 [ -f ~/dotfiles/zsh/zshrc.work ] && source ~/dotfiles/zsh/zshrc.work
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/io/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# bun completions
+[ -s "/Users/io/.bun/_bun" ] && source "/Users/io/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

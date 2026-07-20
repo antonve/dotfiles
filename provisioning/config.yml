@@ -57,12 +57,14 @@ homebrew:
     - ripgrep
     - screen
     - shellcheck
+    - skopeo
     - tfenv
     - tilt
     - tmux
     - tree
     - watchman
     - wget
+    - yq
 
 link:
   shell/profile:             .profile
