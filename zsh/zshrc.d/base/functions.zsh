@@ -52,6 +52,16 @@ awsp() {
   profile=$(aws configure list-profiles | fzf) && export AWS_PROFILE="$profile"
 }
 
+# Connect to a remote Herdr server
+box() {
+  if [ "$#" -ne 1 ]; then
+    echo "Usage: box <remote>" >&2
+    return 1
+  fi
+
+  herdr --remote "$1" --remote-keybindings server
+}
+
 # Tmux
 # ============================================
 
